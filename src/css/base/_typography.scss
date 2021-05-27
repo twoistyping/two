@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Sarabun:ital,wght@0,400;1,600&family=Work+Sans:wght@300;500&display=swap');
+
+@mixin work-sans-regular {
+	font-family: 'Work Sans', Arial, sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
+@mixin work-sans-bold {
+	font-family: 'Work Sans', Arial, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+@mixin saraburn-regular {
+	font-family: 'Sarabun', Arial, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@mixin saraburn-semi-italic {
+	font-family: 'Sarabun', Arial, sans-serif;
+	font-weight: 500;
+	font-style: italic;
+}
+
+h1, .h1, h1 a, .h1 a, h1 span {
+	@include saraburn-semi-italic;
+	line-height: 1;
+	font-size: 16px;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+}
+
+h2, .h2, h2 a, .h2 a, h2 span, .h2 span {
+	@include fluid-type($min_viewport, $max_viewport, 24px, 32px, 24px);
+	@include saraburn-semi-italic;
+	// font-size: 32px;
+	letter-spacing: 0.1rem;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+h2, .h2 {
+	@include fluid-type($min_viewport, $max_viewport, 22px, 32px, 40px, true);
+	display: flex;
+	&:before {
+		background: $almost-black;
+		content: '';
+		flex-shrink: 0;
+		display: inline-block;
+		height: 1px;
+		margin-right: spacing-multiplier(2);
+		width: 50px;
+	}
+}
+
+h3, .h3, h3 a, .h3 a {
+	@include fluid-type($min_viewport, $max_viewport, 16px, 18px, 32px);
+	@include  work-sans-bold;
+	background: $almost-black;
+	color: $almost-white;
+	display: inline-block;
+	letter-spacing: 0.1rem;
+	line-height: 1.2;
+	padding: 0px 4px 1px;
+	text-transform: uppercase;
+}
+
+h4, .h4, h4 a, .h4 a {
+	@include fluid-type($min_viewport, $max_viewport, 16px, 18px, 24px);
+	@include saraburn-semi-italic;
+	line-height: 1.4;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+}
+
+p, p a, p span, a {
+	@include work-sans-regular;
+	@include fluid-type($min_viewport, $max_viewport, 16px, 18px, 16px);
+	color: $almost-black;
+	// font-size: 16px;
+	line-height: 1.5;
+	&.important {
+		background: $yellow;
+		margin: spacing-multiplier(4) 0;
+		padding: spacing-multiplier(1) spacing-multiplier(1);
+		&:before {
+			content: '*';
+			margin-right: spacing-multiplier(1);
+		}
+	}
+}
+
+::placeholder {
+	// color: $teal-medium;
+}
+
+li, input, span, td, th {
+	@include work-sans-regular;
+	@include fluid-type($min_viewport, $max_viewport, 16px, 18px);
+	// color: $body;
+	line-height: 1.4;
+}
+
+a {
+	color: $almost-black;
+	position: relative;
+	text-decoration: none;
+	&:before {
+		background: $pink;
+		bottom: 0;
+		content: '';
+		height: 2px;
+		left: 0;
+		position: absolute;
+		transition: all 300ms ease-in-out;
+		width: 100%;
+		// z-index: -1;
+	}
+	&:hover:before {
+		transform: translateY(-8px);
+	}
+	&:focus {
+	}
+}
+
+a.btn {
+	display: inline-block;
+	text-decoration: none;
+	&:hover {
+	}
+	&:active {
+	}
+	&:focus {
+	}
+}
+
+ul, ol {
+	margin: 0 0 32px 0;
+	padding-left: 16px;
+	li {
+		padding-left: 8px;
+		margin: 8px 0;
+	}
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+	margin-bottom: 0;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+ul li {
+	&::marker {
+		content: "\002B";
+	}
+	> ul > li {
+		&::marker {
+			content: "\2212";
+		}
+		> ul > li {
+			&::marker {
+				content: "\25AA";
+			}
+		}
+	}
+
+	ol li ol {
+		list-style: lower-alpha;
+	}
+
+	ol li ol li ol {
+		list-style: upper-roman;
+	}
+}
+
+ol {
+  list-style-type: none;
+  margin-left: 0;
+	padding: 0;
+}
+
+ol > li {
+  counter-increment: customlistcounter;
+}
+
+ol > li:before {
+  content: counter(customlistcounter) " ";
+	display: inline-block;
+  width: spacing-multiplier(3);
+}
+
+ol:first-child {
+  counter-reset: customlistcounter;
+}
+
+::selection {
+	background: $pink;
+}

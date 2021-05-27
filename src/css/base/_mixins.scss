@@ -1,0 +1,60 @@
+@mixin clearfix() {
+	&::after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+
+// https://css-tricks.com/snippets/css/fluid-typography/
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size, $max-margin-size: null, $before: null) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+			min-height: 0vw;
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+			@if ($max-margin-size) {
+				&:before {
+					margin-top: $min-font-size * 0.6;
+					@media screen and (min-width: $min-vw) {
+		        margin-top: calc((#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)})) * 0.6);
+		      }
+		      @media screen and (min-width: $max-vw) {
+		        margin-top: $max-font-size * 0.6;
+		      }
+				}
+			}
+    }
+  }
+
+	@if ($max-margin-size) {
+		$margin-ratio: strip-unit($max-margin-size / $max-font-size);
+
+		margin: 0 0 ($min-font-size * $margin-ratio);
+		@media screen and (min-width: $min-vw) {
+			$font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+			margin: 0 0 calc(#{$font-size} * #{$margin-ratio});
+		}
+		@media screen and (min-width: $max-vw) {
+			margin: 0 0 $max-margin-size;
+		}
+	}
+}
+
+@function spacing-multiplier($value) {
+  @return $spacing-modifier * $value;
+}

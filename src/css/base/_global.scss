@@ -1,0 +1,68 @@
+// Colours
+$almost-white: #FFFEF8;
+$almost-black: #1E212B;
+$pink: #FFDCE1;
+$yellow: #FFF5C7;
+
+// Spacing
+$spacing-modifier: 8px;
+
+$content-left-desktop: 330px;
+$content-right-desktop: 88px;
+
+$content-width: 860px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+$min-viewport: 320px;
+$max-viewport: 2560px;
+
+$base-font-size: 18px;
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+html {
+	background: $almost-white;
+}
+
+html.front, html.front body {
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: $base-font-size;
+	line-height: 1.5;
+	margin: 0;
+}
+
+img {
+	display: block;
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+.screen-reader-text {
+	display: none;
+}
+
+:focus {
+	outline-color: $almost-black;
+	outline-style: solid;
+	outline-width: 1px;
+	outline-offset: 4px;
+}
+
+// .contain {
+// 	max-width: $content-width;
+// 	margin: 0 auto;
+// 	width: calc(100% - 32px);
+// 	@media (min-width: 450px) {
+// 		width: calc(100% - 48px);
+// 	}
+// 	@media (min-width: $tablet-width) {
+// 		width: calc(100% - 72px);
+// 	}
+// }
