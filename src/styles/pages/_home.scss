@@ -8,23 +8,23 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    // g#cat_svg__shading_two, 
-    // g#cat_svg__body_two,
-    // g#cat_svg__shading_three, 
-    // g#cat_svg__body_three {
-    //   opacity: 0;
-    // }
+    path#cat_svg__light_one,
     g#cat_svg__shading_one, 
     g#cat_svg__body_one {
       animation: catAnimation 600ms step-start infinite;
       animation-play-state: running;
     }
+    path#cat_svg__light_two,
     g#cat_svg__shading_two, 
     g#cat_svg__body_two {
       animation: catAnimationTwo 600ms step-start infinite;
       animation-play-state: running;
       opacity: 0;
     }
+    path#cat_svg__light_two {
+      // animation: catAnimationTwo 600ms step-start infinite, lightAnimationTwo 15s step-start infinite;
+    }
+    path#cat_svg__light_three,
     g#cat_svg__shading_three, 
     g#cat_svg__body_three {
       animation: catAnimationThree 600ms step-start infinite;
@@ -35,64 +35,37 @@
 }
 
 @keyframes catAnimation {
-  0%, 100% {
+  0%, 83.33%, 100% {
     opacity: 1;
   }
-  16.66% {
+  16.66%, 66.66% {
     opacity: 0;
-  }
-  33.33% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  66.66% {
-    opacity: 0;
-  }
-  83.33% {
-    opacity: 1;
   }
 }
 
 @keyframes catAnimationTwo {
-  0%, 100% {
+  0%, 33.33%, 50%, 83.33%, 100% {
     opacity: 0;
   }
-  16.66% {
+  16.66%, 66.66% {
     opacity: 1;
   }
-  33.33% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  66.66% {
+}
+
+@keyframes lightAnimationTwo {
+  0%, 25% {
     opacity: 1;
   }
-  83.33% {
+  20% {
     opacity: 0;
   }
 }
 
 @keyframes catAnimationThree {
-  0%, 100% {
+  0%, 16.66%, 66.66%, 100% {
     opacity: 0;
   }
-  16.66% {
-    opacity: 0;
-  }
-  33.33% {
+  33.33%, 50% {
     opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  66.66% {
-    opacity: 0;
-  }
-  83.33% {
-    opacity: 0;
   }
 }
