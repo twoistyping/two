@@ -8,7 +8,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    @media(min-width: 600px) {
+    @media(min-width: $mobile-width) {
       max-height: 70vh;
       max-width: 70vw;
     }
@@ -16,13 +16,12 @@
     g#cat_svg__shading_one, 
     g#cat_svg__body_one {
       animation: catAnimation 600ms step-start infinite;
-      animation-play-state: running;
+      // animation-play-state: running;
     }
     path#cat_svg__light_two,
     g#cat_svg__shading_two, 
     g#cat_svg__body_two {
       animation: catAnimationTwo 600ms step-start infinite;
-      animation-play-state: running;
       opacity: 0;
     }
     path#cat_svg__light_two {
@@ -32,18 +31,31 @@
     g#cat_svg__shading_three, 
     g#cat_svg__body_three {
       animation: catAnimationThree 600ms step-start infinite;
-      animation-play-state: running;
       opacity: 0;
     }
   }
   svg#symbols {
     height: 100vh;
-    left: 50%;
+    right: 10%;
     position: fixed;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     width: auto;
     z-index: -1;
+    @media(min-width: $desktop-width) {
+      height: 100vh;
+      right: 50%;
+      top: 50%;
+      transform: translate(50%, -50%);
+    }
+    g g g {
+      transform-origin: center;
+      transform-box: fill-box;
+      animation: iconSpin 2s linear infinite;
+      &:nth-child(2n) {
+        animation: iconSpin 2s 1s linear infinite;
+      }
+    }
   }
 }
 
@@ -80,5 +92,17 @@
   }
   33.33%, 50% {
     opacity: 1;
+  }
+}
+
+@keyframes iconSpin {
+  0%, 30% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(-10deg);
   }
 }

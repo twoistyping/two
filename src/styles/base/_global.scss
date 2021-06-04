@@ -7,16 +7,23 @@ $yellow: #FFF5C7;
 // Spacing
 $spacing-modifier: 8px;
 
+$content-left-mobile: 16px;
+$content-left-tablet: 48px;
 $content-left-desktop: 330px;
-$content-right-desktop: 88px;
-
 $content-left-wide-desktop: 530px;
+
+$content-right-mobile: 16px;
+$content-right-tablet: 24px;
+$content-right-desktop: 88px;
 
 $content-top: 192px;
 
-$content-width: 860px;
+$mobile-width: 500px;
 $tablet-width: 768px;
-$desktop-width: 1440px;
+$desktop-width: 1000px;
+$desktop-large-width: 1920px;
+
+$content-width: 860px;
 
 $min-viewport: 320px;
 $max-viewport: 2560px;

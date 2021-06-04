@@ -50,8 +50,8 @@ h2, .h2 {
 		flex-shrink: 0;
 		display: inline-block;
 		height: 1px;
-		margin-right: spacing-multiplier(2);
-		width: 50px;
+		margin-right: spacing-multiplier(1);
+		width: 40px;
 	}
 }
 
@@ -209,4 +209,5 @@ ol:first-child {
 
 ::selection {
 	background: $pink;
+	color: $almost-black;
 }

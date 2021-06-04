@@ -6,6 +6,8 @@ import Social from './components/Social'
 
 import Home from './pages/Home'
 import Artwork from './pages/Artwork'
+import Commissions from './pages/Commissions'
+import Emotes from './pages/Emotes'
 import Guide from './pages/Guide'
 
 export default function App() {
@@ -16,6 +18,8 @@ export default function App() {
         <Switch>
           <Route path="/" exact><Home /></Route>
           <Route path="/artwork"><Artwork /></Route>
+          <Route path="/commissions"><Commissions /></Route>
+          <Route path="/emotes"><Emotes /></Route>
           <Route path="/guide"><Guide /></Route>
         </Switch>
       </Router>

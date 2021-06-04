@@ -1,11 +1,16 @@
 nav.navigation-wrapper .logo {
-  left: -24px;
+  left: spacing-multiplier(-3);
   position: fixed;
-  top: -60px;
-  width: 220px;
-  @media(min-width: $tablet-width) {
-    left: -32px;
+  top: spacing-multiplier(-5);
+  width: 180px;
+  z-index: 1001;
+  @media(min-width: $mobile-width) {
+    top: spacing-multiplier(-7);
     width: 220px;
+  }
+  @media(min-width: $desktop-width) {
+    left: spacing-multiplier(-5);
+    top: spacing-multiplier(-8);
     width: 300px;
   }
   svg {
@@ -41,10 +46,14 @@ nav.navigation-wrapper.menu-close {
 }
 
 nav.navigation-wrapper .menu-icon {
+  cursor: pointer;
   position: fixed;
   top: spacing-multiplier(3);
-  right: spacing-multiplier(3);
+  right: spacing-multiplier(2);
   z-index: 1001;
+  @media(min-width: $tablet-width) {
+    right: spacing-multiplier(3);
+  }
   svg {
     height: 40px;
     width: 40px;
@@ -80,8 +89,14 @@ nav.navigation-wrapper .navigation-container {
   width: 100vw;
   z-index: 1000;
   ul.navigation {
-    margin: 0 $content-left-desktop;
+    margin: 0 $content-right-mobile 0 $content-left-mobile;
     padding: 0;
+    @media(min-width: $tablet-width) {
+      margin: 0 $content-right-tablet 0 $content-left-tablet;
+    }
+    @media(min-width: $desktop-width) {
+      margin: 0 $content-right-desktop 0 $content-left-desktop;
+    }
     li.nav-link {
       list-style: none;
       &::marker {
@@ -90,12 +105,12 @@ nav.navigation-wrapper .navigation-container {
       a {
         display: inline-block;
         overflow: hidden;
-        padding-left: 50px + spacing-multiplier(1);
-        padding-right: spacing-multiplier(2);
+        padding-left: 40px + spacing-multiplier(1);
+        padding-right: spacing-multiplier(1);
         transition: color 300ms ease-in-out;
         &:before {
           bottom: auto;
-          transform: translateX(calc(-100% + 50px));
+          transform: translateX(calc(-100% + 40px));
           width: 100%;
           z-index: -1;
         }

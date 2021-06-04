@@ -1,8 +1,12 @@
 .page-label {
-  position: fixed;
+  display: none;
   left: 0;
+  position: fixed;
   top: 50%;
-  transform: translate(calc(-50% + 24px), -50%) rotate(-90deg);
+  transform: translate(calc(-50% + 22px), -50%) rotate(-90deg);
+  @media(min-width: $tablet-width) {
+    display: block;
+  }
   h1 {
     position: relative;
     white-space: nowrap;

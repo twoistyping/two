@@ -1,8 +1,14 @@
 .content {
-  margin: $content-top $content-right-desktop spacing-multiplier(10) $content-left-desktop;
+  margin: $content-top $content-right-mobile spacing-multiplier(10) $content-left-mobile;
   // margin: $content-top calc((100% - #{$content-width}) * 0.7) spacing-multiplier(10) calc((100% - #{$content-width}) * 0.3);
   max-width: $content-width;
-  @media(min-width: 1920px) {
+  @media(min-width: $tablet-width) {
+    margin: $content-top $content-right-tablet spacing-multiplier(10) $content-left-tablet;
+  }
+  @media(min-width: $desktop-width) {
+    margin: $content-top $content-right-desktop spacing-multiplier(10) $content-left-desktop;
+  }
+  @media(min-width: $desktop-large-width) {
     margin: $content-top $content-right-desktop spacing-multiplier(10) $content-left-wide-desktop;
   }
 }
