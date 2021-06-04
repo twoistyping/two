@@ -35,7 +35,7 @@
     }
   }
   svg#symbols {
-    height: 100vh;
+    height: 104vh;
     right: 10%;
     position: fixed;
     top: 50%;
@@ -43,12 +43,12 @@
     width: auto;
     z-index: -1;
     @media(min-width: $desktop-width) {
-      height: 100vh;
+      height: 104vh;
       right: 50%;
       top: 50%;
       transform: translate(50%, -50%);
     }
-    g g g {
+    g g {
       transform-origin: center;
       transform-box: fill-box;
       animation: iconSpin 2s linear infinite;
