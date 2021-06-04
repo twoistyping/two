@@ -1,0 +1,98 @@
+.home {
+  svg#cat {
+    height: auto;
+    left: 50%;
+    max-height: 70vh;
+    max-width: 70vw;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    // g#cat_svg__shading_two, 
+    // g#cat_svg__body_two,
+    // g#cat_svg__shading_three, 
+    // g#cat_svg__body_three {
+    //   opacity: 0;
+    // }
+    g#cat_svg__shading_one, 
+    g#cat_svg__body_one {
+      animation: catAnimation 600ms step-start infinite;
+      animation-play-state: running;
+    }
+    g#cat_svg__shading_two, 
+    g#cat_svg__body_two {
+      animation: catAnimationTwo 600ms step-start infinite;
+      animation-play-state: running;
+      opacity: 0;
+    }
+    g#cat_svg__shading_three, 
+    g#cat_svg__body_three {
+      animation: catAnimationThree 600ms step-start infinite;
+      animation-play-state: running;
+      opacity: 0;
+    }
+  }
+}
+
+@keyframes catAnimation {
+  0%, 100% {
+    opacity: 1;
+  }
+  16.66% {
+    opacity: 0;
+  }
+  33.33% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  66.66% {
+    opacity: 0;
+  }
+  83.33% {
+    opacity: 1;
+  }
+}
+
+@keyframes catAnimationTwo {
+  0%, 100% {
+    opacity: 0;
+  }
+  16.66% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  66.66% {
+    opacity: 1;
+  }
+  83.33% {
+    opacity: 0;
+  }
+}
+
+@keyframes catAnimationThree {
+  0%, 100% {
+    opacity: 0;
+  }
+  16.66% {
+    opacity: 0;
+  }
+  33.33% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  66.66% {
+    opacity: 0;
+  }
+  83.33% {
+    opacity: 0;
+  }
+}
