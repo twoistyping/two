@@ -5,7 +5,7 @@ import PageLabel from '../components/PageLabel'
 export default function Guide() {
   return (
     <div className="content">
-      <PageLabel label="Lorem Ipsum" />
+      <PageLabel />
       <h2>Lorem ipsum dolor sit amet</h2>
       <h3>Lorem ipsum dolor sit amet</h3>
       <h4>Lorem ipsum dolor sit amet</h4>

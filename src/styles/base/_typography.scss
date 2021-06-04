@@ -107,6 +107,11 @@ a {
 	color: $almost-black;
 	position: relative;
 	text-decoration: none;
+	&.no-style {
+		&:before, &:after {
+			display: none;
+		}
+	}
 	&:before {
 		background: $pink;
 		bottom: 0;

@@ -6,4 +6,8 @@ const PageLabel = ({ label }) => (
 	</div>
 );
 
+PageLabel.defaultProps = {
+	label: "unknown"
+}
+
 export default PageLabel;

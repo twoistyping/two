@@ -1,12 +1,14 @@
-import './css/app.scss';
+import './styles/app.scss';
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 import Nav from './components/Nav'
 import Social from './components/Social'
+
 import Home from './pages/Home'
 import Artwork from './pages/Artwork'
 import Guide from './pages/Guide'
 
-function App() {
+export default function App() {
   return (
     <>
       <Router>
@@ -21,5 +23,3 @@ function App() {
     </>
   );
 }
-
-export default App;

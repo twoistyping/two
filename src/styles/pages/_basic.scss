@@ -1,0 +1,8 @@
+.content {
+  margin: $content-top $content-right-desktop spacing-multiplier(10) $content-left-desktop;
+  // margin: $content-top calc((100% - #{$content-width}) * 0.7) spacing-multiplier(10) calc((100% - #{$content-width}) * 0.3);
+  max-width: $content-width;
+  @media(min-width: 1920px) {
+    margin: $content-top $content-right-desktop spacing-multiplier(10) $content-left-wide-desktop;
+  }
+}

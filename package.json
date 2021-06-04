@@ -2,15 +2,16 @@
   "name": "two-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://twoistyping.github.io/two-website",
+  "homepage": "https://twoistyping.github.io/two",
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
-    "node-sass": "^6.0.0",
+    "@svgr/webpack": "^5.5.0",
     "gh-pages": "^3.1.0",
+    "node-sass": "^6.0.0",
     "react-scripts": "4.0.3"
   },
   "scripts": {

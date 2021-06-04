@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
+import SvgMenu from '../svgComponents/Menu.js';
+import SvgLogo from '../svgComponents/Logo.js';
 
 export default function Nav() {
   const [click, setClick] = useState(false);
@@ -7,21 +9,30 @@ export default function Nav() {
   const closeMenu = () => setClick(false);
 
   return (
-    <nav className='navigation'>
-      <div className='menu-icon' onClick={handleClick}>
-        <div className={click ? 'menu-close' : 'menu-open'}></div>
+    <nav className={'navigation-wrapper ' + (click ? 'menu-close' : 'menu-open')}>
+      <div className="logo">
+      <Link className="no-style" to="/" onClick={closeMenu}><SvgLogo /></Link>
       </div>
-      <ul className='navigation-container'>
-        <li className='nav-link'>
-          <Link to="/artwork" onClick={closeMenu}>Artwork</Link>
-        </li>
-        <li className='nav-link'>
-          <Link to="/emotes" onClick={closeMenu}>Emotes</Link>
-        </li>
-        <li className='nav-link'>
-          <Link to="/commissions" onClick={closeMenu}>Commissions</Link>
-        </li>
-      </ul>
+      <div className='menu-icon' onClick={handleClick}>
+        <SvgMenu />
+      </div>
+      <div className="navigation-container">
+        <ul className='navigation'>
+          <li className='nav-link'>
+            <Link className="h2" to="/artwork" onClick={closeMenu}>Artwork</Link>
+          </li>
+          <li className='nav-link'>
+            <Link className="h2" to="/emotes" onClick={closeMenu}>Emotes</Link>
+          </li>
+          <li className='nav-link'>
+            <Link className="h2" to="/commissions" onClick={closeMenu}>Commissions</Link>
+          </li>
+          <li className='nav-link'>
+            <Link className="h2" to="/guide" onClick={closeMenu}>Guide</Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   )
 }
+
