@@ -2,12 +2,16 @@
   svg#cat {
     height: auto;
     left: 50%;
-    max-height: 70vh;
-    max-width: 70vw;
+    max-height: 90vh;
+    max-width: 90vw;
     position: fixed;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    @media(min-width: 600px) {
+      max-height: 70vh;
+      max-width: 70vw;
+    }
     path#cat_svg__light_one,
     g#cat_svg__shading_one, 
     g#cat_svg__body_one {
@@ -31,6 +35,15 @@
       animation-play-state: running;
       opacity: 0;
     }
+  }
+  svg#symbols {
+    height: 100vh;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    z-index: -1;
   }
 }
 
