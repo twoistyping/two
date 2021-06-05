@@ -16,7 +16,8 @@ export default function Emotes() {
       <PageBlurb>
         <h2>Pack of Expressions</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et ultrices neque ornare aenean euismod elementum nisi quis. Arcu bibendum at varius vel pharetra vel. Pretium nibh ipsum consequat nisl. Mauris a diam maecenas sed enim ut sem. At risus viverra adipiscing at in tellus. Sed nisi lacus sed viverra tellus in hac habitasse. Lectus vestibulum mattis ullamcorper velit. Nisi porta lorem mollis aliquam ut porttitor leo. </p>
-        <Button text='Premade Emotes' link='https://twoartwork.etsy.com' />
+        <Button text='View Gallery' link='#gallery' />
+        <Button text='Premade Emotes' link='https://twoartwork.etsy.com' style='outline' external='true' />
       </PageBlurb>
       <ContentInner>
         <EmoteGrid 
@@ -98,6 +99,14 @@ export default function Emotes() {
         <ul>
           <li>email me at <Link to="mailto:twoartwork@gmail.com">twoartwork@gmail.com</Link> if you are interested in a set of emotes!</li>
         </ul>
+        <EmoteGrid 
+          id="gallery"
+          emotes={[
+            '/images/kda_akali_peace.png',
+            '/images/kda_akali_ramen.png',
+            '/images/kda_akali_kek.png'
+          ]}
+        />
       </ContentInner>
     </Content>
   )

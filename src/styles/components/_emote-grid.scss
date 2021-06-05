@@ -5,6 +5,9 @@
   &:first-child .emote-wrapper {
     margin-top: -1px;
   }
+  &:last-child .emote-wrapper {
+    margin-bottom: -1px;
+  }
   .emote-wrapper {
     border: 1px solid $almost-black;
     flex-basis: calc(100% /3);

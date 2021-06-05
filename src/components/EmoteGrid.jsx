@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EmoteGrid = ({ emotes }) => {
+const EmoteGrid = ({ id, emotes }) => {
   const emoteBox = emotes.map((emote, key) => {
     return (
       <div className='emote-wrapper' key={key}>
@@ -10,7 +10,7 @@ const EmoteGrid = ({ emotes }) => {
   });
 
   return (
-    <div className="emote-grid">
+    <div id={id} className="emote-grid">
       {emoteBox}
     </div>
   )

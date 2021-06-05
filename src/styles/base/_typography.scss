@@ -69,7 +69,7 @@ h3, .h3, h3 a, .h3 a {
 	display: inline-block;
 	letter-spacing: 0.1rem;
 	line-height: 1.2;
-	padding: 0px 4px 1px;
+	padding: 0px 8px 1px;
 	text-transform: uppercase;
 }
 
@@ -144,11 +144,19 @@ a.btn {
 	background-color: $pink;
 	display: inline-block;
 	letter-spacing: 0.1rem;
+	margin-right: spacing-multiplier(3);
 	padding: spacing-multiplier(0.7) spacing-multiplier(3) spacing-multiplier(1);
 	position: relative;
 	text-decoration: none;
 	text-transform: uppercase;
 	z-index: 1;
+	&.yellow {
+		background-color: $yellow;
+	}
+	&.outline {
+		background-color: transparent;
+		border: 1px solid $almost-black;
+	}
 	span {
 		@include cutive-mono;
 		// @include fluid-type($min_viewport, $max_viewport, 14px, 16px);
@@ -170,10 +178,6 @@ a.btn {
 		&:before {
 			transform: scaleY(1);
 		}
-	}
-	&:active {
-	}
-	&:focus {
 	}
 }
 

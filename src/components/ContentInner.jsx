@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContentInner = props => {
   return (
-    <div className="content-lines-wrapper__content">
+    <div className="content-lines__content">
       {props.children}
     </div>
   )

@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
+import { HashLink as Link } from 'react-router-hash-link';
 
-const Button = ({ text, link }) => {
+const Button = ({ text, link, style, external }) => {
   var symbols = ["!", "@", "#", "$", "%", "&", "?"];
   var timer, innerTimer;
 
@@ -17,16 +18,19 @@ const Button = ({ text, link }) => {
     let letters = symbols.sort(() => Math.random() - Math.random()).slice(0, 3);
     var time = Math.random() * (500 - 200) + 200;
     let index = Math.floor(Math.random() * (array.length - 0) + 0);
-    letters.push(array[index].getAttribute('letter'));
-    var j;
 
-    timer = setTimeout(() => handlehoverOuterHelper(array), 300);
+    if (typeof array[index] !== 'undefined') {
+      letters.push(array[index].getAttribute('letter'));
+      var j;
 
-    setTimeout(function() {
-      for(j = 0; j < 4; j++) {
-        handleHoverHelper(index, j, array[index], letters[j]);
-      }
-    }, time);
+      timer = setTimeout(() => handlehoverOuterHelper(array), 300);
+
+      setTimeout(function() {
+        for(j = 0; j < 4; j++) {
+          handleHoverHelper(index, j, array[index], letters[j]);
+        }
+      }, time);
+    }
   }
 
   const handleHoverHelper = (i, j, element, letter) => {
@@ -44,16 +48,30 @@ const Button = ({ text, link }) => {
     });
   }
 
-  return (
-    <Link
-      className='btn'
-      to={link}
-      onMouseEnter={handleHover}
-      onMouseLeave={handleMouseLeave}
-    >
-      {linkTitle}
-    </Link>
-  )
+  if (external) {
+    return (
+      <a
+        className={'btn ' + (style ? style : '')}
+        href={link}
+        target='_blank'
+        onMouseEnter={handleHover}
+        onMouseLeave={handleMouseLeave}
+      >
+        {linkTitle}
+      </a>
+    )
+  } else {
+    return (
+      <Link
+        className={'btn ' + (style ? style : '')}
+        to={link}
+        onMouseEnter={handleHover}
+        onMouseLeave={handleMouseLeave}
+      >
+        {linkTitle}
+      </Link>
+    )
+  }
 }
 
 export default Button
