@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Sarabun:ital,wght@0,400;1,600&family=Work+Sans:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Sarabun:ital,wght@0,400;1,600&family=Work+Sans:wght@300;500&display=swap&family=Cutive+Mono&display=swap');
 
 @mixin work-sans-regular {
 	font-family: 'Work Sans', Arial, sans-serif;
@@ -22,6 +22,12 @@
 	font-family: 'Sarabun', Arial, sans-serif;
 	font-weight: 500;
 	font-style: italic;
+}
+
+@mixin cutive-mono {
+	font-family: 'Cutive Mono', monospace;
+	font-weight: 400;
+	font-style: normal;
 }
 
 h1, .h1, h1 a, .h1 a, h1 span {
@@ -56,7 +62,7 @@ h2, .h2 {
 }
 
 h3, .h3, h3 a, .h3 a {
-	@include fluid-type($min_viewport, $max_viewport, 16px, 18px, 32px);
+	@include fluid-type($min_viewport, $max_viewport, 16px, 18px, 8px);
 	@include  work-sans-bold;
 	background: $almost-black;
 	color: $almost-white;
@@ -77,14 +83,18 @@ h4, .h4, h4 a, .h4 a {
 
 p, p a, p span, a {
 	@include work-sans-regular;
-	@include fluid-type($min_viewport, $max_viewport, 16px, 18px, 16px);
+	@include fluid-type($min_viewport, $max_viewport, 16px, 18px, 24px);
 	color: $almost-black;
 	// font-size: 16px;
 	line-height: 1.5;
+	&.small {
+		@include fluid-type($min_viewport, $max_viewport, 14px, 16px, 16px);
+	}
 	&.important {
+		// @include cutive-mono;
 		background: $yellow;
 		margin: spacing-multiplier(4) 0;
-		padding: spacing-multiplier(1) spacing-multiplier(1);
+		padding: spacing-multiplier(1) spacing-multiplier(2);
 		&:before {
 			content: '*';
 			margin-right: spacing-multiplier(1);
@@ -113,7 +123,7 @@ a {
 		}
 	}
 	&:before {
-		background: $pink;
+		background-color: $pink;
 		bottom: 0;
 		content: '';
 		height: 2px;
@@ -131,9 +141,35 @@ a {
 }
 
 a.btn {
+	background-color: $pink;
 	display: inline-block;
+	letter-spacing: 0.1rem;
+	padding: spacing-multiplier(0.7) spacing-multiplier(3) spacing-multiplier(1);
+	position: relative;
 	text-decoration: none;
+	text-transform: uppercase;
+	z-index: 1;
+	span {
+		@include cutive-mono;
+		// @include fluid-type($min_viewport, $max_viewport, 14px, 16px);
+		&:before {
+			background: #fff;
+			position: absolute;
+			content: "";
+	 }
+	}
+	&:before {
+		background-color: $almost-black;
+		height: 100%;
+		transform: scaleY(0);
+		transform-origin: bottom;
+		z-index: -1;
+	}
 	&:hover {
+		color: $almost-white;
+		&:before {
+			transform: scaleY(1);
+		}
 	}
 	&:active {
 	}
@@ -189,15 +225,13 @@ ul li {
 
 ol {
   list-style-type: none;
-  margin-left: 0;
-	padding: 0;
 }
 
 ol > li {
   counter-increment: customlistcounter;
 }
 
-ol > li:before {
+ol > li::marker {
   content: counter(customlistcounter) " ";
 	display: inline-block;
   width: spacing-multiplier(3);

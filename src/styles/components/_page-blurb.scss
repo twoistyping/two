@@ -1,0 +1,16 @@
+.page-blurb {
+  margin-bottom: spacing-multiplier(4);
+  @media(min-width: $desktop-width) {
+    padding: 0 spacing-multiplier(2);
+  }
+  @media(min-width: 1600px) {
+    left: calc(100% + #{spacing-multiplier(2)});
+    padding: 0;
+    position: absolute;
+    top: $content-top;
+    width: 300px;
+  }
+  @media(min-width: 1750px) {
+    width: 400px;
+  }
+}

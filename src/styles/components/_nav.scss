@@ -1,6 +1,6 @@
 nav.navigation-wrapper .logo {
   left: spacing-multiplier(-3);
-  position: fixed;
+  position: absolute;
   top: spacing-multiplier(-5);
   width: 180px;
   z-index: 1001;
@@ -10,6 +10,7 @@ nav.navigation-wrapper .logo {
   }
   @media(min-width: $desktop-width) {
     left: spacing-multiplier(-5);
+    position: fixed;
     top: spacing-multiplier(-8);
     width: 300px;
   }
@@ -47,12 +48,15 @@ nav.navigation-wrapper.menu-close {
 
 nav.navigation-wrapper .menu-icon {
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   top: spacing-multiplier(3);
   right: spacing-multiplier(2);
   z-index: 1001;
   @media(min-width: $tablet-width) {
     right: spacing-multiplier(3);
+  }
+  @media(min-width: $desktop-width) {
+    position: fixed;
   }
   svg {
     height: 41px;
@@ -96,6 +100,9 @@ nav.navigation-wrapper .navigation-container {
     }
     @media(min-width: $desktop-width) {
       margin: 0 $content-right-desktop 0 $content-left-desktop;
+    }
+    @media(min-width: $desktop-width) {
+      margin: 0 $content-right-desktop 0 $content-left-wide-desktop;
     }
     li.nav-link {
       list-style: none;

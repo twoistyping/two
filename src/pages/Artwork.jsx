@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import PageLabel from '../components/PageLabel'
+import Content from '../components/Content'
 
 export default function Artwork() {
   return (
-    <div className="content">
+    <Content type="lines">
       <PageLabel label="Artwork" />
       <h2>This is the artwork.</h2>
-    </div>
+    </Content>
   )
 }
