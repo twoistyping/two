@@ -46,7 +46,7 @@
 }
 
 .content.gallery {
-  max-width: $gallery-width;
+  max-width: 100%;
   padding-bottom: 0;
   @media(min-width: $desktop-width) {
     display: grid;
