@@ -30,9 +30,9 @@ export default function Emotes() {
         <h3>Simple Emotes</h3>
         <p><i>line art, flat colour, simple shading</i></p>
         <ul>
-          <li>1 emote: 35 cad</li>
-          <li>3 emote: 95 cad</li>
-          <li>5 emote: 155 cad</li>
+          <li>1 emote: $35 cad</li>
+          <li>3 emote: $95 cad</li>
+          <li>5 emote: $155 cad</li>
         </ul>
         <EmoteGrid 
           emotes={[
@@ -44,9 +44,9 @@ export default function Emotes() {
         <h3>Detailed Emotes</h3>
         <p><i>line art, flat colour, detailed shading</i></p>
         <ul>
-          <li>1 emote: 40 cad</li>
-          <li>3 emote: 110 cad</li>
-          <li>5 emote: 180 cad</li>
+          <li>1 emote: $40 cad</li>
+          <li>3 emote: $110 cad</li>
+          <li>5 emote: $180 cad</li>
         </ul>
         <EmoteGrid 
           emotes={[
@@ -58,33 +58,39 @@ export default function Emotes() {
         <h3>Painted Emotes</h3>
         <p><i>painted style for line art and colour</i></p>
         <ul>
-          <li>1 emote: 45 cad</li>
-          <li>3 emote: 125 cad</li>
-          <li>5 emote: 205 cad</li>
+          <li>1 emote: $45 cad</li>
+          <li>3 emote: $125 cad</li>
+          <li>5 emote: $205 cad</li>
         </ul>
         <ImportantContent>
           prices are based on time that I spend on creating the emotes and revisions
         </ImportantContent>
+        <h3>Before We Start</h3>
+        <ul>
+          <li>message me with details of the commission you would like, including: reference images, ideas, colour palette, expressions</li>
+          <li>I will determine if I feel capable of delivering a commission that meets your wants</li>
+          <li>please refer to my previous work for style and capabilities, I cannot promise anything outside of my previous work</li>
+          <li>payment is through paypal, there will be no refunds</li>
+        </ul>
+        <h3>Process</h3>
+        <ol>
+          <li>discussion of general idea and theme/style and payment</li>
+          <li>send basic sketch & feedback changes (major changes need to be done here)</li>
+          <li>flat colours & feedback changes</li>
+          <li>
+            complete lineart and colour
+            <ul>
+              <li>if you are buying a set (more than one emote), I will finalize shading of first emote and send for feedback before I complete the remaining</li>
+            </ul>
+          </li>
+          <li>send for feedback and final adjustments (no major changes, these should be done during sketches)</li>
+          <li>delivery of final set in the sizes below</li>
+        </ol>
         <h4>Sizes</h4>
         <EmoteSizes />
         <ImportantContent>
           if you would like to request another size, please let me know
         </ImportantContent>
-        <h3>Before We Start</h3>
-        <ul>
-          <li>message me with details of the custom emotes you would like, including: reference images, ideas, colour palette, expressions</li>
-          <li>I will do a couple quick sketches and if I feel confident that I can create the emotes you want and you are happy with them, you can make the purchase </li>
-          <li>payment is through paypal, there will be no refunds</li>
-        </ul>
-        <h3>Process</h3>
-        <ol>
-          <li>discussion on more details of each specific emote, then I will make detailed sketches and basic colouring</li>
-          <li>make any adjustments based on feedback from the first set of sketches</li>
-          <li>once these adjustments have been approved, I will draw and colour the finalized version of the first emote (and final if only purchasing one) and send back to you</li>
-          <li>if you are happy with this version, I will finalized the remainder of the emotes and send the whole set</li>
-          <li>once the final set has been sent, you are allowed 1 adjustment per emote</li>
-          <li>after final adjustments, you will receive a zip file through email containing all needed sizes</li>
-        </ol>
         <h3>Other Details</h3>
         <ul>
           <li>responses in a timely matter will help me keep the process going</li>
@@ -92,8 +98,10 @@ export default function Emotes() {
         </ul>
         <h3>Terms of Service</h3>
         <ul>
-          <li>message me with details of the custom emotes you would like, including: reference images, ideas, colour palette, expressions</li>
-          <li>once paid, there will be no refunds</li>
+          <li>I have a right to post my work on socials / portfolios / websites</li>
+          <li>payment is to be confirmed before any work is delivered</li>
+          <li>all commissions are for personal use, please do not resell</li>
+          <li>payment is through paypal, there will be no refunds</li>
         </ul>
         <h3>Let's Get Started</h3>
         <ul>

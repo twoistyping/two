@@ -1,0 +1,41 @@
+a.btn {
+	background-color: $pink;
+	display: inline-block;
+	letter-spacing: 0.1rem;
+	margin-right: spacing-multiplier(3);
+	padding: spacing-multiplier(0.7) spacing-multiplier(3) spacing-multiplier(1);
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	z-index: 1;
+	&.yellow {
+		background-color: $yellow;
+	}
+	&.outline {
+		background-color: transparent;
+		border: 1px solid $almost-black;
+	}
+	span {
+		@include cutive-mono;
+		// @include fluid-type($min_viewport, $max_viewport, 14px, 16px);
+		pointer-events: none;
+		&:before {
+			background: #fff;
+			position: absolute;
+			content: "";
+	 }
+	}
+	&:before {
+		background-color: $almost-black;
+		height: 100%;
+		transform: scaleY(0);
+		transform-origin: bottom;
+		z-index: -1;
+	}
+	&.current, &:hover {
+		color: $almost-white;
+		&:before {
+			transform: scaleY(1);
+		}
+	}
+}

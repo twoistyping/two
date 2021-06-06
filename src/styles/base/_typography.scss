@@ -81,7 +81,7 @@ h4, .h4, h4 a, .h4 a {
 	text-transform: uppercase;
 }
 
-p, p a, p span, a {
+p, p a, a {
 	@include work-sans-regular;
 	@include fluid-type($min_viewport, $max_viewport, 16px, 18px, 24px);
 	color: $almost-black;
@@ -91,14 +91,20 @@ p, p a, p span, a {
 		@include fluid-type($min_viewport, $max_viewport, 14px, 16px, 16px);
 	}
 	&.important {
-		// @include cutive-mono;
+		@include cutive-mono;
 		background: $yellow;
+		display: flex;
+		line-height: 1.25;
 		margin: spacing-multiplier(4) 0;
 		padding: spacing-multiplier(1) spacing-multiplier(2);
 		&:before {
 			content: '*';
 			margin-right: spacing-multiplier(1);
+			margin-top: 0
 		}
+	}
+	span {
+		@include cutive-mono;
 	}
 }
 
@@ -106,10 +112,10 @@ p, p a, p span, a {
 	// color: $teal-medium;
 }
 
-li, input, span, td, th {
+li, input, td, th {
 	@include work-sans-regular;
 	@include fluid-type($min_viewport, $max_viewport, 16px, 18px);
-	// color: $body;
+	color: $almost-black;
 	line-height: 1.4;
 }
 
@@ -135,49 +141,6 @@ a {
 	}
 	&:hover:before {
 		transform: translateY(-8px);
-	}
-	&:focus {
-	}
-}
-
-a.btn {
-	background-color: $pink;
-	display: inline-block;
-	letter-spacing: 0.1rem;
-	margin-right: spacing-multiplier(3);
-	padding: spacing-multiplier(0.7) spacing-multiplier(3) spacing-multiplier(1);
-	position: relative;
-	text-decoration: none;
-	text-transform: uppercase;
-	z-index: 1;
-	&.yellow {
-		background-color: $yellow;
-	}
-	&.outline {
-		background-color: transparent;
-		border: 1px solid $almost-black;
-	}
-	span {
-		@include cutive-mono;
-		// @include fluid-type($min_viewport, $max_viewport, 14px, 16px);
-		&:before {
-			background: #fff;
-			position: absolute;
-			content: "";
-	 }
-	}
-	&:before {
-		background-color: $almost-black;
-		height: 100%;
-		transform: scaleY(0);
-		transform-origin: bottom;
-		z-index: -1;
-	}
-	&:hover {
-		color: $almost-white;
-		&:before {
-			transform: scaleY(1);
-		}
 	}
 }
 

@@ -1,0 +1,61 @@
+.commission-item {
+  border-bottom: 1px solid $almost-black;
+  margin: 0;
+  padding: 15px 15px 16px;
+  @media(min-width: $tablet-width) {
+    display: flex;
+  }
+  + *:not(.commission-item) {
+    margin-top: spacing-multiplier(4);
+  }
+}
+
+.commission-item .commission-image-wrapper, .commission-item .commission-content {
+  @media(min-width: $tablet-width) {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+
+.commission-item .commission-image-wrapper {
+  margin-bottom: spacing-multiplier(1);
+  overflow: hidden;
+  position: relative;
+  @media(min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: spacing-multiplier(2);
+  }
+  .commission-image-overlay {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%);
+    transform-origin: bottom;
+    transition: transform 300ms ease-in-out;
+    background-image: linear-gradient(to bottom, $almost-white 1px, transparent 1px, transparent);
+    background-size: 100% 4px;
+    background-repeat: repeat;
+  }
+}
+
+.commission-item .commission-content {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  @media(min-width: $tablet-width) {
+    flex-direction: column;
+  }
+  p.small {
+    @include cutive-mono;
+    @media(min-width: $tablet-width) {
+      margin: 0;
+    }
+  }
+  .commission-content__buttons a {
+    margin-bottom: spacing-multiplier(2);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -14,7 +14,7 @@
     transform: translate(-50%, -50%);
     span {
       @include cutive-mono;
-      font-size: 48px;
+      @include fluid-type($min_viewport, $max_viewport, 18px, 48px);
       text-transform: uppercase;
     }
   }

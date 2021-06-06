@@ -2,7 +2,7 @@ import React from 'react'
 // import { Link } from "react-router-dom"
 import { HashLink as Link } from 'react-router-hash-link';
 
-const Button = ({ text, link, style, external }) => {
+const Button = ({ text, link, style, external, clickFunction, data }) => {
   var symbols = ["!", "@", "#", "$", "%", "&", "?"];
   var timer, innerTimer;
 
@@ -49,6 +49,7 @@ const Button = ({ text, link, style, external }) => {
         target='_blank'
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
+        data={data}
       >
         {linkTitle}
       </a>
@@ -60,6 +61,8 @@ const Button = ({ text, link, style, external }) => {
         to={link}
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
+        onClick={clickFunction}
+        data={data}
       >
         {linkTitle}
       </Link>

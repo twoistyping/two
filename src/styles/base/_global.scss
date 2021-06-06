@@ -37,6 +37,7 @@ $base-font-size: 18px;
 
 html {
 	background: $almost-white;
+	scroll-behavior: smooth;
 }
 
 html.front, html.front body {

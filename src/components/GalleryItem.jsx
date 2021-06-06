@@ -1,4 +1,4 @@
-import React, { useRef, useState, useLayoutEffect, useEffect } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 
 const GalleryItem = ({ image, title, alt }) => {
   const imageRef = useRef(null);

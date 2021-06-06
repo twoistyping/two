@@ -47,8 +47,9 @@ export default function Artwork() {
             <Button text='Instagram' link='https://instagram.com/twoartwork' style='yellow' external='true' />
           </GalleryBlurb>
           {
-            images.map(image => (
+            images.map((image, key) => (
               <GalleryItem 
+                key={key}
                 image={image.url}
                 title={image.title}
                 alt={image.alt}
