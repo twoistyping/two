@@ -1,4 +1,4 @@
-export const artwork = [
+export const images = [
   {
     id: 0,
     url: "/images/raidesart180k_final.png",

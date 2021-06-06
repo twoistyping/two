@@ -4,9 +4,20 @@
   left: 0;
   position: fixed;
   top: 0;
-  transition: 500ms ease-in-out;
+  transition: 500ms 200ms ease-in-out;
   width: 100vw;
   z-index: 10000;
+  p {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    span {
+      @include cutive-mono;
+      font-size: 48px;
+      text-transform: uppercase;
+    }
+  }
   &.hide {
     opacity: 0;
     pointer-events: none;

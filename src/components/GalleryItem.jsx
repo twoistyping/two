@@ -1,4 +1,4 @@
-import React, { useRef, useState, useLayoutEffect } from 'react'
+import React, { useRef, useState, useLayoutEffect, useEffect } from 'react'
 
 const GalleryItem = ({ image, title, alt }) => {
   const imageRef = useRef(null);
@@ -13,7 +13,7 @@ const GalleryItem = ({ image, title, alt }) => {
     }
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener('resize', handleImageLoad);
   }, []);
 

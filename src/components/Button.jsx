@@ -16,7 +16,6 @@ const Button = ({ text, link, style, external }) => {
 
   const handlehoverOuterHelper = (array) => {
     let letters = symbols.sort(() => Math.random() - Math.random()).slice(0, 3);
-    var time = Math.random() * (500 - 200) + 200;
     let index = Math.floor(Math.random() * (array.length - 0) + 0);
 
     if (typeof array[index] !== 'undefined') {
@@ -25,27 +24,21 @@ const Button = ({ text, link, style, external }) => {
 
       timer = setTimeout(() => handlehoverOuterHelper(array), 300);
 
-      setTimeout(function() {
-        for(j = 0; j < 4; j++) {
-          handleHoverHelper(index, j, array[index], letters[j]);
-        }
-      }, time);
+      for(j = 0; j < 4; j++) {
+        handleHoverHelper(index, j, array[index], letters[j]);
+      }
     }
   }
 
   const handleHoverHelper = (i, j, element, letter) => {
-    innerTimer = setTimeout(function() {
+    setTimeout(function() {
       element.innerHTML = letter;
     }, 300 * j);
   };
 
   const handleMouseLeave = (e) => {
     clearTimeout(timer);
-    timer = 0;
-    
-    [...e.target.children].map((letter) => {
-      letter.innerHTML = letter.getAttribute('letter');
-    });
+    timer = null;
   }
 
   if (external) {
