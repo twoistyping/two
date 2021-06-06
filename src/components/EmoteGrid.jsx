@@ -4,7 +4,11 @@ const EmoteGrid = ({ id, emotes }) => {
   const emoteBox = emotes.map((emote, key) => {
     return (
       <div className='emote-wrapper' key={key}>
-        <img className='emote-image' src={process.env.PUBLIC_URL + emote}/>
+        <img 
+          className='emote-image' 
+          src={process.env.PUBLIC_URL + emote} 
+          alt='emote'
+        />
       </div>
     )
   });

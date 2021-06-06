@@ -1,6 +1,6 @@
 import React, { useRef, useState, useLayoutEffect } from 'react'
 
-const GalleryItem = ({ image, title }) => {
+const GalleryItem = ({ image, title, alt }) => {
   const imageRef = useRef(null);
   const titleRef = useRef(null);
   const [height, setHeight] = useState(0);
@@ -27,6 +27,7 @@ const GalleryItem = ({ image, title }) => {
       <img 
         className='emote-image' 
         src={process.env.PUBLIC_URL + image} 
+        alt={alt}
         ref={imageRef}
         onLoad={handleImageLoad}
       />
