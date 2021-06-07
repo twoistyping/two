@@ -28,6 +28,7 @@ export default function Commissions() {
             images.map((image, key) => (
               <CommissionItem 
                 key={key}
+                commissionStyle={image.commissionStyle}
                 image={image.url}
                 title={image.title}
                 alt={image.alt}

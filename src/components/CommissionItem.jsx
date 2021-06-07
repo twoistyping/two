@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import Button from '../components/Button'
 
-const CommissionItem = ({ image, title, alt, sizes }) => {
+const CommissionItem = ({ commissionStyle, image, title, alt, sizes }) => {
   const imageRef = useRef(null);
   const imageOverlayRef = useRef(null);
   const buttonsRef = useRef(null);
@@ -41,6 +41,8 @@ const CommissionItem = ({ image, title, alt, sizes }) => {
       </div>
       <div className='commission-content'>
         <div className='commission-content__buttons' ref={buttonsRef}>
+          
+        { commissionStyle ? <h4>{commissionStyle}</h4> : '' }
           {setupButtons()}
         </div>
         <p className='small'>{title}</p>
