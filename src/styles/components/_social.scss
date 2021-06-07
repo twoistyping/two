@@ -1,0 +1,63 @@
+.social {
+  bottom: spacing-multiplier(4);
+  display: none;
+  position: fixed;
+  right: 27px;
+  @media(min-width: $desktop-width) {
+    display: block;
+  }
+  &__single {
+    border: 1px solid $almost-black;
+    display: flex;
+    margin-bottom: 0;
+    overflow: hidden;
+    padding: 8px;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      &:before {
+        transform: translateY(0);
+      }
+    }
+    &.twitter {
+      margin-top: -1px;
+      &:before {
+        background-color: $yellow;
+      }
+    }
+    &.email {
+      display: none;
+    }
+    &:before {
+      height: 100%;
+      width: 100%;
+      transform: translateY(100%);
+      z-index: -1;
+    }
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+}
+
+.navigation-container .social {
+  display: flex;
+  margin-top: spacing-multiplier(10);
+  position: unset;
+  &__single {
+    &:before {
+      background-color: $almost-white;
+    }
+    &.twitter {
+      margin-left: -1px;
+      margin-top: 0;
+    }
+    &.email {
+      @include cutive-mono;
+      display: block;
+      font-size: 16px;
+      line-height: 1;
+      margin-left: -1px;
+    }
+  }
+}

@@ -86,47 +86,67 @@ nav.navigation-wrapper .navigation-container {
   left: 0;
   opacity: 0;
   pointer-events: none;
-  position: fixed;
+  position: absolute;
   transition: all 500ms ease-in-out;
   top: 0;
   visibility: hidden;
   width: 100vw;
   z-index: 1000;
+  @media(min-width: $desktop-width) {
+    position: fixed;
+  }
   ul.navigation {
-    margin: 0 $content-right-mobile 0 $content-left-mobile;
+    margin: 100px $content-right-mobile 0 $content-left-mobile;
     padding: 0;
     @media(min-width: $tablet-width) {
-      margin: 0 $content-right-tablet 0 $content-left-tablet;
+      margin: 100px $content-right-tablet 0 $content-left-tablet;
     }
     @media(min-width: $desktop-width) {
       margin: 0 $content-right-desktop 0 $content-left-desktop;
     }
-    @media(min-width: $desktop-width) {
+    @media(min-width: $desktop-large-width) {
       margin: 0 $content-right-desktop 0 $content-left-wide-desktop;
     }
     li.nav-link {
       list-style: none;
+      margin: 0;
+      padding: 0;
       &::marker {
         content: none;
       }
       a {
-        display: inline-block;
-        overflow: hidden;
-        padding-left: 40px + spacing-multiplier(1);
-        padding-right: spacing-multiplier(1);
-        transition: color 300ms ease-in-out;
+        @include fluid-type($min_viewport, $max_viewport, 40px, 80px);
+        margin-right: 0;
+        border: none;
+        margin-bottom: spacing-multiplier(0);
+        padding: 0;
         &:before {
-          bottom: auto;
-          transform: translateX(calc(-100% + 40px));
-          width: 100%;
-          z-index: -1;
+          display: none;
         }
         &:hover {
-          color: $almost-white;
-          &:before {
-            transform: translateX(0) scaleY(40);
-          }
+          color: $almost-black;
         }
+        // width: auto;
+        // padding: spacing-multiplier(0.35) spacing-multiplier(4) spacing-multiplier(0.5);
+
+        // old nav style
+        // display: inline-block;
+        // overflow: hidden;
+        // padding-left: 40px + spacing-multiplier(1);
+        // padding-right: spacing-multiplier(1);
+        // transition: color 300ms ease-in-out;
+        // &:before {
+        //   bottom: auto;
+        //   transform: translateX(calc(-100% + 40px));
+        //   width: 100%;
+        //   z-index: -1;
+        // }
+        // &:hover {
+        //   color: $almost-white;
+        //   &:before {
+        //     transform: translateX(0) scaleY(40);
+        //   }
+        // }
       }
     }
   }

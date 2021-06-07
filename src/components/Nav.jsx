@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
-import SvgMenu from '../svgComponents/Menu.js';
-import SvgLogo from '../svgComponents/Logo.js';
+
+import Social from '../components/Social'
+import SvgMenu from '../svgComponents/Menu';
+import SvgLogo from '../svgComponents/Logo';
+import Button from '../components/Button'
 
 export default function Nav() {
   const [click, setClick] = useState(false);
@@ -19,6 +22,16 @@ export default function Nav() {
       <div className="navigation-container">
         <ul className='navigation'>
           <li className='nav-link'>
+            <Button text='Artwork' link='/artwork' style='outline'  clickFunction={closeMenu} />
+          </li>
+          <li className='nav-link'>
+            <Button text='Emotes' link='/emotes' style='outline'  clickFunction={closeMenu} />
+          </li>
+          <li className='nav-link'>
+            <Button text='Commissions' link='/commissions' style='outline'  clickFunction={closeMenu} />
+          </li>
+
+          {/* <li className='nav-link'>
             <Link className="h2" to="/artwork" onClick={closeMenu}>Artwork</Link>
           </li>
           <li className='nav-link'>
@@ -26,11 +39,13 @@ export default function Nav() {
           </li>
           <li className='nav-link'>
             <Link className="h2" to="/commissions" onClick={closeMenu}>Commissions</Link>
-          </li>
+          </li> */}
           {/* <li className='nav-link'>
             <Link className="h2" to="/guide" onClick={closeMenu}>Guide</Link>
           </li> */}
+          <Social />
         </ul>
+        
       </div>
     </nav>
   )

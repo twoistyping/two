@@ -20,6 +20,7 @@ a.btn {
 		@include cutive-mono;
 		// @include fluid-type($min_viewport, $max_viewport, 14px, 16px);
 		pointer-events: none;
+		transition: color 300ms ease-in-out;
 		&:before {
 			background: #fff;
 			position: absolute;

@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
 // import { Link } from "react-router-dom"
 import { HashLink as Link } from 'react-router-hash-link';
 
 const Button = ({ text, link, style, external, clickFunction, data }) => {
+  const buttonRef = useRef(null);
   var symbols = ["!", "@", "#", "$", "%", "&", "?"];
   var timer, innerTimer;
 
@@ -41,6 +42,13 @@ const Button = ({ text, link, style, external, clickFunction, data }) => {
     timer = null;
   }
 
+  const handleButtonClick = (e) => {
+    handleMouseLeave(e);
+    if(clickFunction) {
+      clickFunction(e);
+    }
+  }
+
   if (external) {
     return (
       <a
@@ -61,8 +69,9 @@ const Button = ({ text, link, style, external, clickFunction, data }) => {
         to={link}
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
-        onClick={clickFunction}
+        onClick={handleButtonClick}
         data={data}
+        ref={buttonRef}
       >
         {linkTitle}
       </Link>
