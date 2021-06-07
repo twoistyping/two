@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import ScrollToTop from '../components/ScrollToTop'
 
 import Loader from '../components/Loader'
 import PageLabel from '../components/PageLabel'
@@ -21,7 +22,7 @@ export default function Artwork() {
         const loadImg = new Image()
         loadImg.src = image
         
-        loadImg.onload = () => setTimeout(function() {resolve(image)}, 800);
+        loadImg.onload = () => setTimeout(function() {resolve(image)}, 500);
         // loadImg.onload = () => resolve(image)
         loadImg.onerror = err => reject(err)
       })
@@ -33,33 +34,35 @@ export default function Artwork() {
   });
 
   return (
-    <Content type="gallery lines">
-      <Loader loading={ loading } />
+    <>
+      <ScrollToTop />
+      <Content type="gallery lines">
+        <Loader loading={ loading } />
 
-      { /* show content after images have loaded */
-        loading ? '' :
-        <>
-          <PageLabel label="Artwork" />
-          <GalleryBlurb>
-            <h2>The Gallery</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et ultrices neque ornare aenean euismod elementum nisi quis. Arcu bibendum at varius vel pharetra vel.</p>
-            <Button text='Twitter' link='https://twitter.com/twoartwork' external='true' />
-            <Button text='Instagram' link='https://instagram.com/twoartwork' style='yellow' external='true' />
-          </GalleryBlurb>
-          {
-            images.map((image, key) => (
-              <GalleryItem 
-                key={key}
-                image={image.url}
-                imageFull={image.urlFull}
-                title={image.title}
-                alt={image.alt}
-              />
-            ))
-          }
-        </>
-      }
-      
-    </Content>
+        { /* show content after images have loaded */
+          loading ? '' :
+          <>
+            <PageLabel label="Artwork" />
+            <GalleryBlurb>
+              <h2>The Gallery</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et ultrices neque ornare aenean euismod elementum nisi quis. Arcu bibendum at varius vel pharetra vel.</p>
+              <Button text='Twitter' link='https://twitter.com/twoartwork' external='true' />
+              <Button text='Instagram' link='https://instagram.com/twoartwork' style='yellow' external='true' />
+            </GalleryBlurb>
+            {
+              images.map((image, key) => (
+                <GalleryItem 
+                  key={key}
+                  image={image.url}
+                  imageFull={image.urlFull}
+                  title={image.title}
+                  alt={image.alt}
+                />
+              ))
+            }
+          </>
+        }
+      </Content>
+    </>
   )
 }
