@@ -1,12 +1,13 @@
 a.btn {
 	background-color: $pink;
-	display: inline-block;
+	display: block;
 	letter-spacing: 0.1rem;
 	margin-right: spacing-multiplier(3);
-	padding: spacing-multiplier(0.7) spacing-multiplier(3) spacing-multiplier(1);
+	padding: spacing-multiplier(0.35) spacing-multiplier(2) spacing-multiplier(0.5);
 	position: relative;
 	text-decoration: none;
 	text-transform: uppercase;
+	width: fit-content;
 	z-index: 1;
 	&.yellow {
 		background-color: $yellow;

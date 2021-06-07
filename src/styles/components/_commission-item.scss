@@ -33,7 +33,7 @@
     transform: translateY(100%);
     transform-origin: bottom;
     transition: transform 300ms ease-in-out;
-    background-image: linear-gradient(to bottom, $almost-white 1px, transparent 1px, transparent);
+    background-image: linear-gradient(to bottom, $almost-black 1px, transparent 1px, transparent);
     background-size: 100% 4px;
     background-repeat: repeat;
   }

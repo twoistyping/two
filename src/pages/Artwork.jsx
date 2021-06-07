@@ -21,7 +21,7 @@ export default function Artwork() {
         const loadImg = new Image()
         loadImg.src = image
         
-        loadImg.onload = () => setTimeout(function() {resolve(image)}, 1000);
+        loadImg.onload = () => setTimeout(function() {resolve(image)}, 800);
         // loadImg.onload = () => resolve(image)
         loadImg.onerror = err => reject(err)
       })
@@ -51,6 +51,7 @@ export default function Artwork() {
               <GalleryItem 
                 key={key}
                 image={image.url}
+                imageFull={image.urlFull}
                 title={image.title}
                 alt={image.alt}
               />

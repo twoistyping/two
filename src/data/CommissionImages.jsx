@@ -1,14 +1,14 @@
 export const images = [
   {
     id: 0,
-    url: "/images/raidesart180k_comm.png",
+    url: "/images/raidesart180k_comm.jpg",
     title: "RaidesArt190k DTYS",
     alt: "Girl in flower dress",
     sizes: [
       {
         name: "Bust",
         price: "$60cad",
-        heightPercent: "45%"
+        heightPercent: "40%"
       },
       {
         name: "Waist",
@@ -24,7 +24,7 @@ export const images = [
   },
   {
     id: 1,
-    url: "/images/lux_dark_cosmic_nobg.png",
+    url: "/images/lux_dark_cosmic_comm.jpg",
     title: "Lux with Dark Cosmic Skin",
     alt: "Lux with Dark Cosmic Skin",
     sizes: [

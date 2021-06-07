@@ -69,7 +69,7 @@ export default function Emotes() {
         <ul>
           <li>message me with details of the commission you would like, including: reference images, ideas, colour palette, expressions</li>
           <li>I will determine if I feel capable of delivering a commission that meets your wants</li>
-          <li>please refer to my previous work for style and capabilities, I cannot promise anything outside of my previous work</li>
+          <li>please refer to <Link to='/artwork'>my previous work</Link> for style and capabilities, I cannot promise anything outside of my previous work</li>
           <li>payment is through paypal, there will be no refunds</li>
         </ul>
         <h3>Process</h3>

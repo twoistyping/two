@@ -5,7 +5,7 @@ const GalleryBlurb = props => {
   const [height, setHeight] = useState(0);
 
   const handleContentHeight = () => {
-    if (window.innerWidth >= 1000) {
+    if ((window.innerWidth >= 1000) && contentRef.current) {
       var heightTemp = 0;
 
       [...contentRef.current.children].map((child) => {

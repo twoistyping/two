@@ -27,9 +27,9 @@ export default function Nav() {
           <li className='nav-link'>
             <Link className="h2" to="/commissions" onClick={closeMenu}>Commissions</Link>
           </li>
-          <li className='nav-link'>
+          {/* <li className='nav-link'>
             <Link className="h2" to="/guide" onClick={closeMenu}>Guide</Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>
