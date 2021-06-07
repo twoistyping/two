@@ -18,6 +18,9 @@
         transform: translateY(0);
       }
     }
+    &.instagram:before {
+      background-color: $pink;
+    }
     &.twitter {
       margin-top: -1px;
       &:before {

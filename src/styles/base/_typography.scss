@@ -108,6 +108,10 @@ p, p a, a {
 	}
 }
 
+p {
+	max-width: $content-width;
+}
+
 ::placeholder {
 	// color: $teal-medium;
 }
@@ -173,6 +177,7 @@ li > ol {
 ul li {
 	&::marker {
 		content: "\002B";
+		// content: "\01F802";
 	}
 	> ul > li {
 		&::marker {

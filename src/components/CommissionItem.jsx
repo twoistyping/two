@@ -1,16 +1,40 @@
 import React, { useRef } from 'react'
 import Button from '../components/Button'
 
-const CommissionItem = ({ commissionStyle, image, title, alt, sizes }) => {
+const CommissionItem = ({ 
+  commissionStyle, 
+  image, 
+  title, 
+  alt, 
+  sizes 
+}) => {
   const imageRef = useRef(null);
   const imageOverlayRef = useRef(null);
   const buttonsRef = useRef(null);
 
   const setupButtons = () => {
     return sizes.map((size, key) => {
-      return <Button key={key} text={size.name + ' ' + size.price} link='#details' style='commission' mouseOverFunction={onMouseOver} mouseOutFunction={onMouseOut} data={size.heightPercent}><span>{size.name}</span><span>{size.price}</span></Button>;
+      return (
+        <Button 
+          key={key} text={size.name + ' ' + size.price} 
+          link='#' 
+          style='commission' 
+          // mouseClickFunction={onMouseClick}
+          mouseOverFunction={onMouseOver} 
+          mouseOutFunction={onMouseOut} 
+          data={size.heightPercent}
+        >
+          <span>{size.name}</span><span>{size.price}</span>
+        </Button>
+      );
     });
   }
+
+  // const onMouseClick =(e) => {
+  //   if (window.innerWidth < 768) {
+  //     e.preventDefault();
+  //   }
+  // }
 
   const onMouseOver = (e) => {
     if(buttonsRef.current) {

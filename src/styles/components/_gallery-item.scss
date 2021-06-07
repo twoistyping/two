@@ -3,13 +3,15 @@
   width: 100%;
   @media(max-width: $desktop-width - 1px) {
     border: 1px solid $almost-black;
-    border-bottom: 0;
+    &:not(:last-child) {
+      border-bottom: 0;
+    }
   }
   @media(min-width: $desktop-width) {
     border-bottom: 1px solid $almost-black;
-  }
-  &:last-child, &:nth-last-child(2) {
-    border-bottom: 0;
+    &:last-child, &:nth-last-child(2) {
+      border-bottom: 0;
+    }
   }
   img {
     margin-bottom: spacing-multiplier(1);

@@ -96,7 +96,7 @@ nav.navigation-wrapper .navigation-container {
     position: fixed;
   }
   ul.navigation {
-    margin: 100px $content-right-mobile 0 $content-left-mobile;
+    margin: 50px $content-right-mobile 0 $content-left-mobile;
     padding: 0;
     @media(min-width: $tablet-width) {
       margin: 100px $content-right-tablet 0 $content-left-tablet;

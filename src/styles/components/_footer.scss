@@ -15,6 +15,9 @@ footer.site-footer {
   ul {
     margin: 0;
     li {
+      &::marker {
+        content: '\002B';
+      }
       @media(min-width: $desktop-width) {
         padding-left: spacing-multiplier(20);
       }

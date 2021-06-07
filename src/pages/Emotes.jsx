@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link'
 
 import ScrollToTop from '../components/ScrollToTop'
 import PageLabel from '../components/PageLabel'
@@ -18,10 +18,11 @@ export default function Emotes() {
       <Content type="lines">
         <PageLabel label="Emotes" />
         <PageBlurb>
-          <h2>Pack of Expressions</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et ultrices neque ornare aenean euismod elementum nisi quis. Arcu bibendum at varius vel pharetra vel. Pretium nibh ipsum consequat nisl. Mauris a diam maecenas sed enim ut sem. At risus viverra adipiscing at in tellus. Sed nisi lacus sed viverra tellus in hac habitasse. Lectus vestibulum mattis ullamcorper velit. Nisi porta lorem mollis aliquam ut porttitor leo. </p>
-          <Button text='View Gallery' link='#gallery' />
+          <h2>Twitch & Discord Emotes</h2>
+          <p>If you would like to commission me to create emotes for you, please take a look at the prices and details on this page.</p>
+          <p>I also make premade sets, click the link below to check them out :)</p>
           <Button text='Premade Emotes' link='https://twoartwork.etsy.com' style='outline' external='true' />
+          <Button text='Emote Gallery' link='#gallery' />
         </PageBlurb>
         <ContentInner>
           <EmoteGrid 
@@ -73,7 +74,7 @@ export default function Emotes() {
           <ul>
             <li>message me with details of the commission you would like, including: reference images, ideas, colour palette, expressions</li>
             <li>I will determine if I feel capable of delivering a commission that meets your wants</li>
-            <li>please refer to <Link to='/artwork'>my previous work</Link> for style and capabilities, I cannot promise anything outside of my previous work</li>
+            <li>please refer to <Link to='/emotes#gallery'>my previous work</Link> for style and capabilities, I cannot promise anything outside of my previous work</li>
             <li>payment is through paypal, there will be no refunds</li>
           </ul>
           <h3>Process</h3>

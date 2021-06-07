@@ -45,7 +45,12 @@ export default function Artwork() {
             <PageLabel label="Artwork" />
             <GalleryBlurb>
               <h2>The Gallery</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et ultrices neque ornare aenean euismod elementum nisi quis. Arcu bibendum at varius vel pharetra vel.</p>
+              <p>In the process of growing and developing my skill and style. </p>
+              <uL>
+                <li>programs: clip studio paint, photoshop</li>
+                <li>brushes: pencil, watercolour dense, watercolour soft, airbrush</li>
+                <li>tablet: cintiq 13hd</li>
+              </uL>
               <Button text='Twitter' link='https://twitter.com/twoartwork' external='true' />
               <Button text='Instagram' link='https://instagram.com/twoartwork' style='yellow' external='true' />
             </GalleryBlurb>

@@ -19,7 +19,8 @@ export default function Commissions() {
         <PageLabel label="Commissions" />
         <PageBlurb>
           <h2>Work with Me</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et ultrices neque ornare aenean euismod elementum nisi quis. Arcu bibendum at varius vel pharetra vel. Pretium nibh ipsum consequat nisl. Mauris a diam maecenas sed enim ut sem. At risus viverra adipiscing at in tellus. Sed nisi lacus sed viverra tellus in hac habitasse. Lectus vestibulum mattis ullamcorper velit. Nisi porta lorem mollis aliquam ut porttitor leo. </p>
+          <p>I am still in the process of learning and developing my style, so if you would like to commmission me please refer to my previous work to see my capabilities.</p>
+          <p>If you are into my artwork, check out the commission details!</p>
           <Button text='Commission Details' link='#details' />
           <Button text='Artwork Gallery' link='/artwork' style='yellow' />
         </PageBlurb>

@@ -22,13 +22,13 @@ export default function Nav() {
       <div className="navigation-container">
         <ul className='navigation'>
           <li className='nav-link'>
-            <Button text='Artwork' link='/artwork' style='outline'  clickFunction={closeMenu} />
+            <Button text='Artwork' link='/artwork' style='outline'  mouseClickFunction={closeMenu} />
           </li>
           <li className='nav-link'>
-            <Button text='Emotes' link='/emotes' style='outline'  clickFunction={closeMenu} />
+            <Button text='Emotes' link='/emotes' style='outline'  mouseClickFunction={closeMenu} />
           </li>
           <li className='nav-link'>
-            <Button text='Commissions' link='/commissions' style='outline'  clickFunction={closeMenu} />
+            <Button text='Commissions' link='/commissions' style='outline'  mouseClickFunction={closeMenu} />
           </li>
 
           {/* <li className='nav-link'>

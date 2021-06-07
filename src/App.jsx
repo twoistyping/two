@@ -20,7 +20,7 @@ export default function App() {
           <Route path="/artwork"><Artwork /></Route>
           <Route path="/commissions"><Commissions /></Route>
           <Route path="/emotes"><Emotes /></Route>
-          <Route path="/guide"><Guide /></Route>
+          {/* <Route path="/guide"><Guide /></Route> */}
         </Switch>
       </Router>
       <Social />

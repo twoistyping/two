@@ -7,7 +7,7 @@ const Button = ({
   link, 
   style, 
   external, 
-  clickFunction, 
+  mouseClickFunction, 
   mouseOverFunction, 
   mouseOutFunction, 
   data, 
@@ -54,8 +54,8 @@ const Button = ({
 
   const handleButtonClick = (e) => {
     handleMouseLeave(e);
-    if(clickFunction) {
-      clickFunction(e);
+    if(mouseClickFunction) {
+      mouseClickFunction(e);
     }
   }
 
