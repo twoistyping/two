@@ -7,22 +7,24 @@ const CommissionItem = ({ commissionStyle, image, title, alt, sizes }) => {
   const buttonsRef = useRef(null);
 
   const setupButtons = () => {
-    return sizes.map(size => {
-      return <Button text={size.name + ' ' + size.price} link='#' style='outline' clickFunction={onButtonClicked} data={size.heightPercent} />;
+    return sizes.map((size, key) => {
+      return <Button key={key} text={size.name + ' ' + size.price} link='#details' style='commission' mouseOverFunction={onMouseOver} mouseOutFunction={onMouseOut} data={size.heightPercent} />;
     });
   }
 
-  const onButtonClicked = (e) => {
-    e.preventDefault();
-
+  const onMouseOver = (e) => {
     if(buttonsRef.current) {
-      [...buttonsRef.current.children].map(button => {
-        button.classList.remove('current');
-      })
+      // [...buttonsRef.current.children].map(button => {
+      //   button.classList.remove('current');
+      // })
 
       imageOverlayRef.current.style.transform = 'translateY(' + e.target.getAttribute('data') + ')';
-      e.target.classList.add('current');
+      // e.target.classList.add('current');
     }
+  }
+
+  const onMouseOut = (e) => {
+    imageOverlayRef.current.style.transform = 'translateY(100%)';
   }
 
   return (

@@ -1,9 +1,10 @@
 a.btn {
+	@include cutive-mono;
 	background-color: $pink;
 	display: block;
 	letter-spacing: 0.1rem;
 	margin-right: spacing-multiplier(3);
-	padding: spacing-multiplier(0.35) spacing-multiplier(2) spacing-multiplier(0.5);
+	padding: spacing-multiplier(0.4) spacing-multiplier(2) spacing-multiplier(0.5);
 	position: relative;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -15,6 +16,13 @@ a.btn {
 	&.outline {
 		background-color: transparent;
 		border: 1px solid $almost-black;
+	}
+	&.commission {
+		background-color: transparent;
+		border: 1px solid $almost-black;
+		margin-bottom: -1px;
+		margin-right: -16px;
+		width: auto;
 	}
 	span {
 		@include cutive-mono;

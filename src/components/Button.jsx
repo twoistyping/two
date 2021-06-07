@@ -2,10 +2,10 @@ import React, { useRef } from 'react'
 // import { Link } from "react-router-dom"
 import { HashLink as Link } from 'react-router-hash-link';
 
-const Button = ({ text, link, style, external, clickFunction, data }) => {
+const Button = ({ text, link, style, external, clickFunction, mouseOverFunction, mouseOutFunction, data }) => {
   const buttonRef = useRef(null);
   var symbols = ["!", "@", "#", "$", "%", "&", "?"];
-  var timer, innerTimer;
+  var timer;
 
   const linkTitle = [...text].map((letter, key) => {
     return <span key={key} letter={letter}>{letter}</span>
@@ -67,13 +67,13 @@ const Button = ({ text, link, style, external, clickFunction, data }) => {
       <Link
         className={'btn ' + (style ? style : '')}
         to={link}
-        onMouseEnter={handleHover}
-        onMouseLeave={handleMouseLeave}
+        onMouseEnter={ mouseOverFunction ? mouseOverFunction : handleHover }
+        onMouseLeave={ mouseOutFunction ? mouseOutFunction : handleMouseLeave }
         onClick={handleButtonClick}
         data={data}
         ref={buttonRef}
       >
-        {linkTitle}
+        { (style === 'commission') ? text : linkTitle }
       </Link>
     )
   }
