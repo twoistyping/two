@@ -117,6 +117,9 @@ li, input, td, th {
 	@include fluid-type($min_viewport, $max_viewport, 16px, 18px);
 	color: $almost-black;
 	line-height: 1.4;
+	span {
+		@include cutive-mono;
+	}
 }
 
 a {

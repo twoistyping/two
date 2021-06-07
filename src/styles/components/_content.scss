@@ -16,7 +16,7 @@
   margin: 0 $content-right-mobile 0 $content-left-mobile;
   min-height: 100vh;
   max-width: $content-width;
-  padding: $content-top 0;
+  padding: $content-top 0 0;
   position: relative;
   @media(min-width: $tablet-width) {
     margin: 0 $content-right-tablet 0 $content-left-tablet;
@@ -41,6 +41,9 @@
       &:first-child {
         margin-top: spacing-multiplier(3);
       }
+    }
+    > *:last-child:not(.emote-grid) {
+      margin-bottom: spacing-multiplier(14);
     }
   }
 }

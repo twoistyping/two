@@ -9,6 +9,7 @@ import Artwork from './pages/Artwork'
 import Commissions from './pages/Commissions'
 import Emotes from './pages/Emotes'
 import Guide from './pages/Guide'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
