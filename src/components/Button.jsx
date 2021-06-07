@@ -2,7 +2,17 @@ import React, { useRef } from 'react'
 // import { Link } from "react-router-dom"
 import { HashLink as Link } from 'react-router-hash-link';
 
-const Button = ({ text, link, style, external, clickFunction, mouseOverFunction, mouseOutFunction, data }) => {
+const Button = ({ 
+  text, 
+  link, 
+  style, 
+  external, 
+  clickFunction, 
+  mouseOverFunction, 
+  mouseOutFunction, 
+  data, 
+  children 
+}) => {
   const buttonRef = useRef(null);
   var symbols = ["!", "@", "#", "$", "%", "&", "?"];
   var timer;
@@ -73,7 +83,7 @@ const Button = ({ text, link, style, external, clickFunction, mouseOverFunction,
         data={data}
         ref={buttonRef}
       >
-        { (style === 'commission') ? text : linkTitle }
+        { children ? children : linkTitle }
       </Link>
     )
   }

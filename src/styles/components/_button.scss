@@ -20,13 +20,14 @@ a.btn {
 	&.commission {
 		background-color: transparent;
 		border: 1px solid $almost-black;
+		display: flex;
+		justify-content: space-between;
 		margin-bottom: -1px;
 		margin-right: -16px;
 		width: auto;
 	}
 	span {
 		@include cutive-mono;
-		// @include fluid-type($min_viewport, $max_viewport, 14px, 16px);
 		pointer-events: none;
 		transition: color 300ms ease-in-out;
 		&:before {
@@ -42,7 +43,7 @@ a.btn {
 		transform-origin: bottom;
 		z-index: -1;
 	}
-	&.current, &:hover {
+	&:hover {
 		color: $almost-white;
 		&:before {
 			transform: scaleY(1);
