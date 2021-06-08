@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/twoartwork.com/static/css/main.e5952904.chunk.css",
-    "main.js": "/twoartwork.com/static/js/main.d15a5ab1.chunk.js",
-    "main.js.map": "/twoartwork.com/static/js/main.d15a5ab1.chunk.js.map",
-    "runtime-main.js": "/twoartwork.com/static/js/runtime-main.5cccbb1d.js",
-    "runtime-main.js.map": "/twoartwork.com/static/js/runtime-main.5cccbb1d.js.map",
-    "static/js/2.d6997335.chunk.js": "/twoartwork.com/static/js/2.d6997335.chunk.js",
-    "static/js/2.d6997335.chunk.js.map": "/twoartwork.com/static/js/2.d6997335.chunk.js.map",
-    "index.html": "/twoartwork.com/index.html",
-    "static/css/main.e5952904.chunk.css.map": "/twoartwork.com/static/css/main.e5952904.chunk.css.map",
-    "static/js/2.d6997335.chunk.js.LICENSE.txt": "/twoartwork.com/static/js/2.d6997335.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.e5952904.chunk.css",
+    "main.js": "/static/js/main.4fb18989.chunk.js",
+    "main.js.map": "/static/js/main.4fb18989.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c932c381.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c932c381.js.map",
+    "static/js/2.d6997335.chunk.js": "/static/js/2.d6997335.chunk.js",
+    "static/js/2.d6997335.chunk.js.map": "/static/js/2.d6997335.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.e5952904.chunk.css.map": "/static/css/main.e5952904.chunk.css.map",
+    "static/js/2.d6997335.chunk.js.LICENSE.txt": "/static/js/2.d6997335.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5cccbb1d.js",
+    "static/js/runtime-main.c932c381.js",
     "static/js/2.d6997335.chunk.js",
     "static/css/main.e5952904.chunk.css",
-    "static/js/main.d15a5ab1.chunk.js"
+    "static/js/main.4fb18989.chunk.js"
   ]
 }
