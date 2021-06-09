@@ -22,7 +22,7 @@ export default function Artwork() {
         const loadImg = new Image()
         loadImg.src = image
         
-        loadImg.onload = () => setTimeout(function() {resolve(image)}, 500);
+        loadImg.onload = () => setTimeout(function() {resolve(image)}, 200);
         // loadImg.onload = () => resolve(image)
         loadImg.onerror = err => reject(err)
       })
