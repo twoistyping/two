@@ -3,7 +3,7 @@ export const images = [
     id: 0,
     url: "/images/raidesart180k_final.jpg",
     urlFull: "/images/raidesart180k_final.png",
-    title: "RaidesArt190k DTYS",
+    title: "RaidesArt190k DTIYS",
     alt: "Girl in flower dress"
   },
   {

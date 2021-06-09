@@ -3,7 +3,7 @@ export const images = [
     id: 0,
     commissionStyle: "My Style",
     url: "/images/raidesart180k_comm.jpg",
-    title: "RaidesArt190k DTYS",
+    title: "RaidesArt190k DTIYS",
     alt: "Girl in flower dress",
     sizes: [
       {
