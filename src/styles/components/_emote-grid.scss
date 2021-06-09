@@ -13,7 +13,7 @@
     flex-basis: calc(100% /3);
     margin: 0 -1px spacing-multiplier(3) 0;
     padding: spacing-multiplier(1);
-    &:first-child {
+    &:nth-child(3n-2) {
       margin-left: -1px;
     }
   }
