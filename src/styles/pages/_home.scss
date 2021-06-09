@@ -13,21 +13,24 @@
       max-width: 70vw;
     }
     g#cat_svg__shading_one, 
-    g#cat_svg__body_one {
+    g#cat_svg__body_one,
+    path#cat_svg__body_one_colour {
       animation: catAnimation 600ms step-start infinite;
     }
     g#cat_svg__shading_two, 
-    g#cat_svg__body_two {
+    g#cat_svg__body_two,
+    path#cat_svg__body_two_colour {
       animation: catAnimationTwo 600ms step-start infinite;
       opacity: 0;
     }
     g#cat_svg__shading_three, 
-    g#cat_svg__body_three {
+    g#cat_svg__body_three,
+    path#cat_svg__body_three_colour {
       animation: catAnimationThree 600ms step-start infinite;
       opacity: 0;
     }
     path#cat_svg__light {
-      animation: lightFlicker 6s step-start infinite;
+      animation: lightFlicker 5s step-start infinite;
     }
   }
   svg#symbols {
@@ -57,11 +60,11 @@
 }
 
 @keyframes lightFlicker {
-  0%, 82%, 86%, 90% {
-    opacity: 0;
-  }
-  80%, 84%, 88% {
+  0%, 78%, 82%, 86%, 93% {
     opacity: 1;
+  }
+  80%, 84%, 92% {
+    opacity: 0;
   }
 }
 
