@@ -42,7 +42,7 @@ export default function Emotes() {
           <EmoteGrid 
             emotes={[
               '/images/ahri_drool.png',
-              '/images/ahri_thumbsup.png',
+              '/images/kda_akali_kek.png',
               '/images/piratekingashe_happy.png'
             ]}
           />
@@ -53,7 +53,7 @@ export default function Emotes() {
             <li>3 emote: $110 cad</li>
             <li>5 emote: $180 cad</li>
           </ul>
-          <EmoteGrid 
+          {/* <EmoteGrid 
             emotes={[
               '/images/kda_akali_peace.png',
               '/images/kda_akali_ramen.png',
@@ -66,7 +66,7 @@ export default function Emotes() {
             <li>1 emote: $45 cad</li>
             <li>3 emote: $125 cad</li>
             <li>5 emote: $205 cad</li>
-          </ul>
+          </ul> */}
           <ImportantContent>
             prices are based on time that I spend on creating the emotes and revisions
           </ImportantContent>
@@ -128,6 +128,7 @@ export default function Emotes() {
               '/images/ahri_thinking.png',
               '/images/kda_akali_facepalm.png',
               '/images/kda_akali_sleep.png',
+              '/images/ahri_thumbsup.png'
             ]}
           />
         </ContentInner>
