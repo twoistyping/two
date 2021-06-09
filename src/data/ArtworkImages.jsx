@@ -19,5 +19,17 @@ export const images = [
     urlFull: "/images/sophie_final.png",
     title: "Howl's Moving Castle - Sophie",
     alt: "Sophie from Howl's Moving Caslte"
+  },
+  {
+    id: 2,
+    url: "/images/lux_dark_cosmic.jpg",
+    title: "Lux: Dark Cosmic",
+    alt: "Lux with Dark Cosmic Skin Chibi"
+  },
+  {
+    id: 2,
+    url: "/images/0001_yellow.jpg",
+    title: "Pink Hair",
+    alt: "Girl with Pink Hair"
   }
 ];

@@ -14,9 +14,27 @@ nav.navigation-wrapper .logo {
     top: spacing-multiplier(-8);
     width: 280px;
   }
-  svg {
-    height: auto;
-    width: 100%;
+  a {
+    &:hover {
+      svg g#logo_svg__bolt_top, svg g#logo_svg__bolt_bottom {
+        animation: logoFlash 600ms 300ms step-start;
+      }
+    }
+    svg {
+      height: auto;
+      width: 100%;
+      g#logo_svg__bolt_top, g#logo_svg__bolt_bottom {
+      }
+    }
+  }
+}
+
+@keyframes logoFlash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
   }
 }
 

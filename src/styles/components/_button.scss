@@ -26,15 +26,11 @@ a.btn {
 		margin-right: -16px;
 		width: auto;
 	}
-	span {
-		@include cutive-mono;
-		pointer-events: none;
-		transition: color 300ms ease-in-out;
-		&:before {
-			background: #fff;
-			position: absolute;
-			content: "";
-	 }
+	&:focus {
+		outline-color: $almost-black;
+		outline-style: solid;
+		outline-width: 1px;
+		outline-offset: 4px;
 	}
 	&:before {
 		background-color: $almost-black;
@@ -48,5 +44,15 @@ a.btn {
 		&:before {
 			transform: scaleY(1);
 		}
+	}
+	span {
+		@include cutive-mono;
+		pointer-events: none;
+		transition: color 300ms ease-in-out;
+		&:before {
+			background: #fff;
+			position: absolute;
+			content: "";
+	 }
 	}
 }
