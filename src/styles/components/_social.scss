@@ -18,10 +18,10 @@
         transform: translateY(0);
       }
     }
-    &.instagram:before {
+    &.twitter:before {
       background-color: $pink;
     }
-    &.twitter {
+    &.instagram {
       margin-top: -1px;
       &:before {
         background-color: $yellow;

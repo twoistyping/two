@@ -50,7 +50,7 @@ export default function Commissions() {
             <p>I am still in the process of learning and developing my style, so if you would like to commmission me please refer to my previous work to see my capabilities.</p>
             <p>If you are into my artwork, check out the commission details!</p>
             <Button text='Commission Details' link='#details' />
-            <Button text='Artwork Gallery' link='/artwork' style='yellow' />
+            <Button text='Artwork Gallery' link='/artwork' buttonStyle='yellow' />
           </PageBlurb>
           <ContentInner>
             {

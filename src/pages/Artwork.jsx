@@ -46,13 +46,13 @@ export default function Artwork() {
             <GalleryBlurb>
               <h2>The Gallery</h2>
               <p>In the process of growing and developing my skill and style. </p>
-              <uL>
+              <ul>
                 <li>programs: clip studio paint, photoshop</li>
                 <li>brushes: pencil, watercolour dense, watercolour soft, airbrush</li>
                 <li>tablet: cintiq 13hd</li>
-              </uL>
+              </ul>
               <Button text='Twitter' link='https://twitter.com/twoartwork' external='true' />
-              <Button text='Instagram' link='https://instagram.com/twoartwork' style='yellow' external='true' />
+              <Button text='Instagram' link='https://instagram.com/twoartwork' buttonStyle='yellow' external='true' />
             </GalleryBlurb>
             {
               images.map((image, key) => (

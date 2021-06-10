@@ -59,6 +59,24 @@
   }
 }
 
+
+// Fix broken cat animation for now
+@supports (-moz-appearance: none) {
+  .home svg#cat {
+    g#cat_svg__shading_one, 
+    g#cat_svg__body_one,
+    path#cat_svg__body_one_colour,
+    g#cat_svg__shading_two, 
+    g#cat_svg__body_two,
+    path#cat_svg__body_two_colour,
+    g#cat_svg__shading_three, 
+    g#cat_svg__body_three,
+    path#cat_svg__body_three_colour {
+      animation: none;
+    }
+  }
+}
+
 @keyframes lightFlicker {
   0%, 78%, 82%, 86%, 93% {
     opacity: 1;
@@ -86,21 +104,21 @@
   }
 }
 
-@keyframes lightAnimationTwo {
-  0%, 25% {
-    opacity: 1;
-  }
-  20% {
-    opacity: 0;
-  }
-}
-
 @keyframes catAnimationThree {
   0%, 16.66%, 66.66%, 100% {
     opacity: 0;
   }
   33.33%, 50% {
     opacity: 1;
+  }
+}
+
+@keyframes lightAnimationTwo {
+  0%, 25% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
   }
 }
 

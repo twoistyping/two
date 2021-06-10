@@ -9,7 +9,7 @@ const GalleryBlurb = props => {
       var heightTemp = 0;
 
       [...contentRef.current.children].map((child) => {
-        heightTemp += child.offsetHeight ? child.offsetHeight : 0;
+        return heightTemp += child.offsetHeight ? child.offsetHeight : 0;
       })
 
       setHeight(Math.floor((heightTemp + 200) / 8));

@@ -40,7 +40,7 @@ const Loader = ({ loading }) => {
 
   useEffect(() => {
     scrambleLetters();
-  }, []);
+  });
 
   return (
     <div className={'loader ' + (loading ? 'show' : 'hide')} ref={loaderRef}>

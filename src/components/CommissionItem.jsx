@@ -18,7 +18,7 @@ const CommissionItem = ({
         <Button 
           key={key} text={size.name + ' ' + size.price} 
           link='#' 
-          style='commission' 
+          buttonStyle='commission' 
           // mouseClickFunction={onMouseClick}
           mouseOverFunction={onMouseOver} 
           mouseOutFunction={onMouseOut} 

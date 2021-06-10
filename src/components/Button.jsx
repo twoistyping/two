@@ -5,7 +5,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 const Button = ({ 
   text, 
   link, 
-  style, 
+  buttonStyle, 
   external, 
   mouseClickFunction, 
   mouseOverFunction, 
@@ -62,12 +62,13 @@ const Button = ({
   if (external) {
     return (
       <a
-        className={'btn ' + (style ? style : '')}
+        className={'btn ' + (buttonStyle ? buttonStyle : '')}
         href={link}
         target='_blank'
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
         data={data}
+        rel='noreferrer'
       >
         {linkTitle}
       </a>
@@ -75,7 +76,7 @@ const Button = ({
   } else {
     return (
       <Link
-        className={'btn ' + (style ? style : '')}
+        className={'btn ' + (buttonStyle ? buttonStyle : '')}
         to={link}
         onMouseEnter={ mouseOverFunction ? mouseOverFunction : handleHover }
         onMouseLeave={ mouseOutFunction ? mouseOutFunction : handleMouseLeave }

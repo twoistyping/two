@@ -49,7 +49,7 @@ export default function Emotes() {
               <h2>Twitch & Discord Emotes</h2>
               <p>If you would like to commission me to create emotes for you, please take a look at the prices and details on this page.</p>
               <p>I also make premade sets, click the link below to check them out :)</p>
-              <Button text='Premade Emotes' link='https://twoartwork.etsy.com' style='outline' external='true' />
+              <Button text='Premade Emotes' link='https://twoartwork.etsy.com' buttonStyle='outline' external='true' />
               <Button text='Emote Gallery' link='#gallery' />
             </PageBlurb>
             <ContentInner>
