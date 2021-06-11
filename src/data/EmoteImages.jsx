@@ -8,6 +8,12 @@ export const images = [
   '/images/kda_akali_kek.png',
   '/images/piratekingashe_happy.png',
   // Gallery
+  '/images/piratekingashe_sad.png',
+  '/images/piratekingashe_vibing.png',
+  '/images/kda_akali_peace.png',
+  '/images/kda_akali_ramen.png',
+  '/images/kda_akali_facepalm.png',
+  '/images/kda_akali_sleep.png',
   '/images/lux_hmph.png',
   '/images/lux_wah.png',
   '/images/ahri_pat.png',
@@ -19,9 +25,5 @@ export const images = [
   '/images/ahri_shook.png',
   '/images/ahri_shy.png',
   '/images/ahri_thinking.png',
-  '/images/kda_akali_peace.png',
-  '/images/kda_akali_ramen.png',
-  '/images/kda_akali_facepalm.png',
-  '/images/kda_akali_sleep.png',
   '/images/ahri_thumbsup.png'
 ];
