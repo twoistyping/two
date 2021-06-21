@@ -1,21 +1,27 @@
 export const images = [
-  // Simple Emotes
-  '/images/lux_cute.png',
-  '/images/lux_giggle.png',
-  '/images/lux_wave.png',
-  // Detailed Emotes
-  '/images/ahri_drool.png',
+  // Feature Emotes
+  '/images/king_f.png',
   '/images/kda_akali_kek.png',
   '/images/piratekingashe_happy.png',
   // Gallery
+  '/images/king_music.png',
+  '/images/king_heart.png',
+  '/images/king_kek.png',
+  '/images/king_ramen.png',
+  '/images/cerengMcHuh.png',
+  '/images/buff_psy.png',
   '/images/piratekingashe_sad.png',
   '/images/piratekingashe_vibing.png',
   '/images/kda_akali_peace.png',
   '/images/kda_akali_ramen.png',
   '/images/kda_akali_facepalm.png',
   '/images/kda_akali_sleep.png',
+  '/images/lux_cute.png',
+  '/images/lux_giggle.png',
+  '/images/lux_wave.png',
   '/images/lux_hmph.png',
   '/images/lux_wah.png',
+  '/images/ahri_drool.png',
   '/images/ahri_pat.png',
   '/images/ahri_charm.png',
   '/images/ahri_cry.png',

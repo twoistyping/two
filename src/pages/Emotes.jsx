@@ -53,25 +53,20 @@ export default function Emotes() {
               <Button text='Emote Gallery' link='#gallery' />
             </PageBlurb>
             <ContentInner>
-              <EmoteGrid 
-                // emotes={[
-                //   '/images/lux_cute.png',
-                //   '/images/lux_giggle.png',
-                //   '/images/lux_wave.png'
-                // ]}
+              {/* <EmoteGrid 
                 emotes={images.slice(0, 3)}
-              />
-              <h3>Simple Emotes</h3>
+              /> */}
+              {/* <h3>Simple Emotes</h3>
               <p><i>line art, flat colour, simple shading</i></p>
               <ul>
                 <li>1 emote: $35 cad</li>
                 <li>3 emote: $95 cad</li>
                 <li>5 emote: $155 cad</li>
-              </ul>
+              </ul> */}
               <EmoteGrid 
-                emotes={images.slice(3, 6)}
+                emotes={images.slice(0, 3)}
               />
-              <h3>Detailed Emotes</h3>
+              <h3>Prices</h3>
               <p><i>line art, flat colour, detailed shading</i></p>
               <ul>
                 <li>1 emote: $40 cad</li>
@@ -139,7 +134,7 @@ export default function Emotes() {
               </ul>
               <EmoteGrid 
                 id="gallery"
-                emotes={images.slice(6)}
+                emotes={images.slice(3)}
               />
             </ContentInner>
           </>

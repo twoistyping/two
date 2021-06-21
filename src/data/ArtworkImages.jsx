@@ -21,13 +21,19 @@ export const images = [
     alt: "Sophie from Howl's Moving Caslte"
   },
   {
-    id: 2,
+    id: 3,
     url: "/images/lux_dark_cosmic.jpg",
     title: "Lux: Dark Cosmic",
     alt: "Lux with Dark Cosmic Skin Chibi"
   },
   {
-    id: 2,
+    id: 4,
+    url: "/images/cosmic_nami_comm.jpg",
+    title: "Cosmic Nami Commission",
+    alt: "Nami with Cosmic Skin"
+  },
+  {
+    id: 5,
     url: "/images/0001_yellow.jpg",
     title: "Pink Hair",
     alt: "Girl with Pink Hair"
