@@ -4,11 +4,11 @@ nav.navigation-wrapper .logo {
   top: spacing-multiplier(-5);
   width: 180px;
   z-index: 1001;
-  @media(min-width: $mobile-width) {
+  @media (min-width: $mobile-width) {
     top: spacing-multiplier(-7);
     width: 220px;
   }
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     left: spacing-multiplier(-5);
     position: fixed;
     top: spacing-multiplier(-8);
@@ -16,7 +16,8 @@ nav.navigation-wrapper .logo {
   }
   a {
     &:hover {
-      svg g#logo_svg__bolt_top, svg g#logo_svg__bolt_bottom {
+      svg g#logo_svg__bolt_top,
+      svg g#logo_svg__bolt_bottom {
         animation: delayedFlash 600ms 300ms step-start;
       }
     }
@@ -28,10 +29,13 @@ nav.navigation-wrapper .logo {
 }
 
 @keyframes delayedFlash {
-  0%, 50%, 100% {
+  0%,
+  50%,
+  100% {
     opacity: 1;
   }
-  25%, 75% {
+  25%,
+  75% {
     opacity: 0;
   }
 }
@@ -68,10 +72,10 @@ nav.navigation-wrapper .menu-icon {
   top: spacing-multiplier(3);
   right: spacing-multiplier(2);
   z-index: 1001;
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     right: spacing-multiplier(3);
   }
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     position: fixed;
   }
   svg {
@@ -80,6 +84,9 @@ nav.navigation-wrapper .menu-icon {
     path {
       transform-origin: center;
       transition: transform 300ms ease-in-out;
+    }
+    g {
+      stroke-width: 2px;
     }
     &:hover {
       path {
@@ -108,19 +115,19 @@ nav.navigation-wrapper .navigation-container {
   visibility: hidden;
   width: 100vw;
   z-index: 1000;
-  @media(min-width: $desktop-width) {
+  @media (min-width: $desktop-width) {
     position: fixed;
   }
   ul.navigation {
     margin: 50px $content-right-mobile 0 $content-left-mobile;
     padding: 0;
-    @media(min-width: $tablet-width) {
+    @media (min-width: $tablet-width) {
       margin: 100px $content-right-tablet 0 $content-left-tablet;
     }
-    @media(min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
       margin: 0 $content-right-desktop 0 $content-left-desktop;
     }
-    @media(min-width: $desktop-large-width) {
+    @media (min-width: $desktop-large-width) {
       margin: 0 $content-right-desktop 0 $content-left-wide-desktop;
     }
     li.nav-link {

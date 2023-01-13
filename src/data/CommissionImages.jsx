@@ -8,20 +8,20 @@ export const images = [
     sizes: [
       {
         name: "Bust",
-        price: "$80cad",
-        heightPercent: "40%"
+        price: "TBD",
+        heightPercent: "40%",
       },
       {
         name: "Waist",
-        price: "$100cad",
-        heightPercent: "60%"
+        price: "TBD",
+        heightPercent: "60%",
       },
       {
         name: "Thigh",
-        price: "$140cad",
-        heightPercent: "100%"
-      }
-    ]
+        price: "TBD",
+        heightPercent: "100%",
+      },
+    ],
   },
   {
     id: 1,
@@ -32,14 +32,14 @@ export const images = [
     sizes: [
       {
         name: "Bust",
-        price: "$60cad",
-        heightPercent: "85%"
+        price: "TBD",
+        heightPercent: "85%",
       },
       {
         name: "Waist",
-        price: "$90cad",
-        heightPercent: "100%"
-      }
-    ]
-  }
-];
+        price: "TBD",
+        heightPercent: "100%",
+      },
+    ],
+  },
+]
