@@ -26,9 +26,9 @@ export default function Nav() {
           <li className="nav-link">
             <Button text="Artwork" link="/artwork" buttonStyle="outline" mouseClickFunction={closeMenu} />
           </li>
-          <li className="nav-link">
+          {/* <li className="nav-link">
             <Button text="Emotes" link="/emotes" buttonStyle="outline" mouseClickFunction={closeMenu} />
-          </li>
+          </li> */}
           <li className="nav-link">
             <Button text="Commissions" link="/commissions" buttonStyle="outline" mouseClickFunction={closeMenu} />
           </li>
