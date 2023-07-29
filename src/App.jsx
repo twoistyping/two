@@ -19,7 +19,7 @@ export default function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/artwork" element={<Artwork />} />
           <Route path="/commissions" element={<Commissions />} />
-          <Route path="/emotes" element={<Emotes />} />
+          {/* <Route path="/emotes" element={<Emotes />} /> */}
           {/* <Route path="/guide"><Guide /></Route> */}
         </Routes>
       </Router>
